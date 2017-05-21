@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Reaching the world feature.
+ */
+
+include_once 'reaching_the_world.features.inc';
