@@ -51,7 +51,7 @@ function reaching_the_world_domain_conf_default_variables() {
   $domain_variables['reaching_city'] = array(
     'site_name' => 'City Bible Forum',
     'site_mail' => 'doulos@citybibleforum.org',
-    'site_slogan' => 'Reaching the world through the workplace<br/>with the good news about Jesus',
+    'site_slogan' => '<span style="display: inline-block;">Reaching the world</span> <span style="display: inline-block;">through the workplace</span> <span style="display: inline-block;">with the good news</span> <span style="display: inline-block;">about Jesus</span>',
     'site_frontpage' => 'home',
     'anonymous' => 'Anonymous',
     'admin_theme' => 'seven',
