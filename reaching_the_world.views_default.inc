@@ -100,7 +100,6 @@ function reaching_the_world_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'jcarousel';
   $handler->display->display_options['style_options']['wrap'] = 'both';
   $handler->display->display_options['style_options']['visible'] = '3';
-  $handler->display->display_options['style_options']['responsive'] = 1;
   $handler->display->display_options['style_options']['scroll'] = '1';
   $handler->display->display_options['style_options']['auto'] = '5';
   $handler->display->display_options['style_options']['autoPause'] = 1;
