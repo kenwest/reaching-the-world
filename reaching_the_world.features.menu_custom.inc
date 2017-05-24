@@ -10,10 +10,22 @@
 function reaching_the_world_menu_default_menu_custom() {
   $menus = array();
 
+  // Exported menu: menu-reaching-city-footer-naviga.
+  $menus['menu-reaching-city-footer-naviga'] = array(
+    'menu_name' => 'menu-reaching-city-footer-naviga',
+    'title' => 'reaching.city footer navigation',
+    'description' => '',
+  );
   // Exported menu: menu-reaching-city-main-menu.
   $menus['menu-reaching-city-main-menu'] = array(
     'menu_name' => 'menu-reaching-city-main-menu',
     'title' => 'reaching.city main menu',
+    'description' => '',
+  );
+  // Exported menu: menu-reaching-city-other-sites.
+  $menus['menu-reaching-city-other-sites'] = array(
+    'menu_name' => 'menu-reaching-city-other-sites',
+    'title' => 'reaching.city other sites',
     'description' => '',
   );
   // Exported menu: menu-reaching-city-secondary-men.
@@ -24,7 +36,9 @@ function reaching_the_world_menu_default_menu_custom() {
   );
   // Translatables
   // Included for use with string extractors like potx.
+  t('reaching.city footer navigation');
   t('reaching.city main menu');
+  t('reaching.city other sites');
   t('reaching.city secondary menu');
 
   return $menus;
