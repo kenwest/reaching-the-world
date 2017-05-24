@@ -10,6 +10,98 @@
 function reaching_the_world_menu_default_menu_links() {
   $menu_links = array();
 
+  // Exported menu link: menu-reaching-city-footer-naviga_about-us:node/13.
+  $menu_links['menu-reaching-city-footer-naviga_about-us:node/13'] = array(
+    'menu_name' => 'menu-reaching-city-footer-naviga',
+    'link_path' => 'node/13',
+    'router_path' => 'node/%',
+    'link_title' => 'About us',
+    'options' => array(
+      'attributes' => array(),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
+      'identifier' => 'menu-reaching-city-footer-naviga_about-us:node/13',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -50,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-reaching-city-footer-naviga_contact-us:contact/us.
+  $menu_links['menu-reaching-city-footer-naviga_contact-us:contact/us'] = array(
+    'menu_name' => 'menu-reaching-city-footer-naviga',
+    'link_path' => 'contact/us',
+    'router_path' => 'contact/%',
+    'link_title' => 'Contact us',
+    'options' => array(
+      'attributes' => array(),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
+      'identifier' => 'menu-reaching-city-footer-naviga_contact-us:contact/us',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -49,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-reaching-city-footer-naviga_privacy:node/61.
+  $menu_links['menu-reaching-city-footer-naviga_privacy:node/61'] = array(
+    'menu_name' => 'menu-reaching-city-footer-naviga',
+    'link_path' => 'node/61',
+    'router_path' => 'node/%',
+    'link_title' => 'Privacy',
+    'options' => array(
+      'attributes' => array(),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
+      'identifier' => 'menu-reaching-city-footer-naviga_privacy:node/61',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -48,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-reaching-city-main-menu_about-us:node/13.
+  $menu_links['menu-reaching-city-main-menu_about-us:node/13'] = array(
+    'menu_name' => 'menu-reaching-city-main-menu',
+    'link_path' => 'node/13',
+    'router_path' => 'node/%',
+    'link_title' => 'About us',
+    'options' => array(
+      'attributes' => array(),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
+      'identifier' => 'menu-reaching-city-main-menu_about-us:node/13',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -47,
+    'customized' => 1,
+  );
   // Exported menu link: menu-reaching-city-main-menu_blog:articles.
   $menu_links['menu-reaching-city-main-menu_blog:articles'] = array(
     'menu_name' => 'menu-reaching-city-main-menu',
@@ -31,6 +123,29 @@ function reaching_the_world_menu_default_menu_links() {
     'has_children' => 0,
     'expanded' => 0,
     'weight' => -48,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-reaching-city-main-menu_contact-us:contact/us.
+  $menu_links['menu-reaching-city-main-menu_contact-us:contact/us'] = array(
+    'menu_name' => 'menu-reaching-city-main-menu',
+    'link_path' => 'contact/us',
+    'router_path' => 'contact/%',
+    'link_title' => 'Contact us',
+    'options' => array(
+      'attributes' => array(),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
+      'identifier' => 'menu-reaching-city-main-menu_contact-us:contact/us',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -46,
     'customized' => 1,
   );
   // Exported menu link: menu-reaching-city-main-menu_library:library.
@@ -70,6 +185,75 @@ function reaching_the_world_menu_default_menu_links() {
         'style' => '',
       ),
       'identifier' => 'menu-reaching-city-main-menu_main-site://citybibleforum.org',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -50,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-reaching-city-main-menu_support-us:node/15.
+  $menu_links['menu-reaching-city-main-menu_support-us:node/15'] = array(
+    'menu_name' => 'menu-reaching-city-main-menu',
+    'link_path' => 'node/15',
+    'router_path' => 'node/%',
+    'link_title' => 'Support us',
+    'options' => array(
+      'attributes' => array(),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
+      'identifier' => 'menu-reaching-city-main-menu_support-us:node/15',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -45,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-reaching-city-other-sites_bigger-questions:http://biggerquestions.org.
+  $menu_links['menu-reaching-city-other-sites_bigger-questions:http://biggerquestions.org'] = array(
+    'menu_name' => 'menu-reaching-city-other-sites',
+    'link_path' => 'http://biggerquestions.org',
+    'router_path' => '',
+    'link_title' => 'Bigger questions',
+    'options' => array(
+      'attributes' => array(),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
+      'identifier' => 'menu-reaching-city-other-sites_bigger-questions:http://biggerquestions.org',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -49,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-reaching-city-other-sites_city-bible-forum:http://citybibleforum.org.
+  $menu_links['menu-reaching-city-other-sites_city-bible-forum:http://citybibleforum.org'] = array(
+    'menu_name' => 'menu-reaching-city-other-sites',
+    'link_path' => 'http://citybibleforum.org',
+    'router_path' => '',
+    'link_title' => 'City Bible Forum',
+    'options' => array(
+      'attributes' => array(),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
+      'identifier' => 'menu-reaching-city-other-sites_city-bible-forum:http://citybibleforum.org',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -271,15 +455,21 @@ function reaching_the_world_menu_default_menu_links() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('About us');
   t('Adelaide');
+  t('Bigger questions');
   t('Blog');
   t('Brisbane');
   t('Canberra');
+  t('City Bible Forum');
+  t('Contact us');
   t('Hobart');
   t('Library');
   t('Main site');
   t('Melbourne');
   t('Perth');
+  t('Privacy');
+  t('Support us');
   t('Sydney');
 
   return $menu_links;
