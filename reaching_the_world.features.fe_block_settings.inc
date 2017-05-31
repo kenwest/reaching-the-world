@@ -50,7 +50,7 @@ function reaching_the_world_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'reaching',
-        'weight' => -64,
+        'weight' => -65,
       ),
       'seven' => array(
         'region' => '',
@@ -108,6 +108,63 @@ function reaching_the_world_default_fe_block_settings() {
         'status' => 1,
         'theme' => 'reaching',
         'weight' => -68,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+      'smith' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'smith',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['menu-menu-reaching-city-main-menu'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'menu-reaching-city-main-menu',
+    'module' => 'menu',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bootstrap' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bootstrap',
+        'weight' => 0,
+      ),
+      'cbootf' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'cbootf',
+        'weight' => 0,
+      ),
+      'garland' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'garland',
+        'weight' => 0,
+      ),
+      'logoslive' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'logoslive',
+        'weight' => 0,
+      ),
+      'reaching' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'reaching',
+        'weight' => 17,
       ),
       'seven' => array(
         'region' => '',
@@ -221,7 +278,7 @@ function reaching_the_world_default_fe_block_settings() {
         'region' => 'header',
         'status' => 1,
         'theme' => 'reaching',
-        'weight' => -66,
+        'weight' => -69,
       ),
       'seven' => array(
         'region' => '',
@@ -238,6 +295,69 @@ function reaching_the_world_default_fe_block_settings() {
     ),
     'title' => '<none>',
     'visibility' => 1,
+  );
+
+  $export['views-b43afb752ddf969d8154e0a8971b2bb5'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'b43afb752ddf969d8154e0a8971b2bb5',
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => 'city/adelaide
+city/brisbane
+city/canberra
+city/hobart
+city/melbourne
+city/perth
+city/sydney',
+    'roles' => array(),
+    'themes' => array(
+      'bootstrap' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bootstrap',
+        'weight' => 0,
+      ),
+      'cbootf' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'cbootf',
+        'weight' => 0,
+      ),
+      'garland' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'garland',
+        'weight' => 0,
+      ),
+      'logoslive' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'logoslive',
+        'weight' => 0,
+      ),
+      'reaching' => array(
+        'region' => 'header',
+        'status' => 1,
+        'theme' => 'reaching',
+        'weight' => -67,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+      'smith' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'smith',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
   );
 
   $export['views-reaching_city_highlights-block'] = array(
@@ -275,10 +395,10 @@ function reaching_the_world_default_fe_block_settings() {
         'weight' => 0,
       ),
       'reaching' => array(
-        'region' => 'content',
+        'region' => 'header',
         'status' => 1,
         'theme' => 'reaching',
-        'weight' => -65,
+        'weight' => -68,
       ),
       'seven' => array(
         'region' => '',
