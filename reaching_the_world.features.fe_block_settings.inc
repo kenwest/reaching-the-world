@@ -14,7 +14,7 @@ function reaching_the_world_default_fe_block_settings() {
 
   $export['block-reaching_city_promotional_video'] = array(
     'cache' => -1,
-    'css_class' => 'promotional-video',
+    'css_class' => 'unbounded',
     'custom' => 0,
     'machine_name' => 'reaching_city_promotional_video',
     'module' => 'block',

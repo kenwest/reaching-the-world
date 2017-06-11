@@ -14,7 +14,8 @@ function reaching_the_world_default_fe_block_boxes() {
   $fe_block_boxes->info = 'reaching.city promotional video';
   $fe_block_boxes->format = '2';
   $fe_block_boxes->machine_name = 'reaching_city_promotional_video';
-  $fe_block_boxes->body = '<p>[video:https://www.youtube.com/watch?v=X21RTB9GgHE]</p>';
+  $fe_block_boxes->body = '<p>[video:https://www.youtube.com/watch?v=X21RTB9GgHE]</p>
+';
 
   $export['reaching_city_promotional_video'] = $fe_block_boxes;
 
