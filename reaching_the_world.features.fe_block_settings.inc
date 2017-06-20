@@ -360,6 +360,63 @@ city/sydney',
     'visibility' => 0,
   );
 
+  $export['views-cb6ba155a962fef6259a859bbffc6e37'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'cb6ba155a962fef6259a859bbffc6e37',
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => 'civicrm-event/*',
+    'roles' => array(),
+    'themes' => array(
+      'bootstrap' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bootstrap',
+        'weight' => 0,
+      ),
+      'cbootf' => array(
+        'region' => 'sidebar_first',
+        'status' => 1,
+        'theme' => 'cbootf',
+        'weight' => 0,
+      ),
+      'garland' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'garland',
+        'weight' => 0,
+      ),
+      'logoslive' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'logoslive',
+        'weight' => 0,
+      ),
+      'reaching' => array(
+        'region' => 'sidebar_first',
+        'status' => 1,
+        'theme' => 'reaching',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+      'smith' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'smith',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '<none>',
+    'visibility' => 1,
+  );
+
   $export['views-reaching_city_highlights-block'] = array(
     'cache' => -1,
     'css_class' => '',

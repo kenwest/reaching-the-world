@@ -160,6 +160,190 @@ function reaching_the_world_views_default_views() {
   $export['reaching_city_city_page'] = $view;
 
   $view = new view();
+  $view->name = 'reaching_city_civicrm_event_gmap';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'civicrm_event';
+  $view->human_name = 'reaching.city CiviCRM Event gMap';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = '<none>';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'time';
+  $handler->display->display_options['cache']['results_lifespan'] = '1800';
+  $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
+  $handler->display->display_options['cache']['output_lifespan'] = '1800';
+  $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'gmapextended';
+  $handler->display->display_options['style_options']['fallback_values'] = array(
+    'text' => '',
+    'rmt' => '',
+    'iwq' => '',
+    'iwo' => '',
+    'link' => '',
+    'latitude' => '',
+    'longitude' => '',
+    'title' => '',
+    'markername' => 'small bred',
+    'offset' => '',
+  );
+  $handler->display->display_options['style_options']['field_purposes'] = array(
+    'title' => '',
+    'supplemental_address_1' => '',
+    'street_address' => '',
+    'city' => '',
+    'postal_code' => '',
+    'geo_code_1' => 'latitude',
+    'geo_code_2' => 'longitude',
+    'nothing' => 'title',
+  );
+  $handler->display->display_options['style_options']['datasource'] = 'fields';
+  $handler->display->display_options['style_options']['markertype'] = 'small bred';
+  $handler->display->display_options['style_options']['center_on_proximityfilter_rel'] = 'none';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'supplemental_address_1' => 'supplemental_address_1',
+    'street_address' => 'street_address',
+    'city' => 'city',
+    'postal_code' => 'postal_code',
+  );
+  /* Relationship: Address */
+  $handler->display->display_options['relationships']['id']['id'] = 'id';
+  $handler->display->display_options['relationships']['id']['table'] = 'civicrm_address';
+  $handler->display->display_options['relationships']['id']['field'] = 'id';
+  $handler->display->display_options['relationships']['id']['ui_name'] = 'Address';
+  $handler->display->display_options['relationships']['id']['label'] = 'Address';
+  $handler->display->display_options['relationships']['id']['required'] = TRUE;
+  $handler->display->display_options['relationships']['id']['location_type'] = '0';
+  $handler->display->display_options['relationships']['id']['location_op'] = '0';
+  $handler->display->display_options['relationships']['id']['is_primary'] = 0;
+  /* Field: CiviCRM Events: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'civicrm_event';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_civicrm_event'] = 'registration';
+  /* Field: CiviCRM Address: Supplemental Street Address */
+  $handler->display->display_options['fields']['supplemental_address_1']['id'] = 'supplemental_address_1';
+  $handler->display->display_options['fields']['supplemental_address_1']['table'] = 'civicrm_address';
+  $handler->display->display_options['fields']['supplemental_address_1']['field'] = 'supplemental_address_1';
+  $handler->display->display_options['fields']['supplemental_address_1']['relationship'] = 'id';
+  $handler->display->display_options['fields']['supplemental_address_1']['label'] = '';
+  $handler->display->display_options['fields']['supplemental_address_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['supplemental_address_1']['location_type'] = '0';
+  $handler->display->display_options['fields']['supplemental_address_1']['location_op'] = '0';
+  $handler->display->display_options['fields']['supplemental_address_1']['is_primary'] = 0;
+  $handler->display->display_options['fields']['supplemental_address_1']['is_billing'] = 0;
+  /* Field: CiviCRM Address: Full Street Address */
+  $handler->display->display_options['fields']['street_address']['id'] = 'street_address';
+  $handler->display->display_options['fields']['street_address']['table'] = 'civicrm_address';
+  $handler->display->display_options['fields']['street_address']['field'] = 'street_address';
+  $handler->display->display_options['fields']['street_address']['relationship'] = 'id';
+  $handler->display->display_options['fields']['street_address']['label'] = '';
+  $handler->display->display_options['fields']['street_address']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['street_address']['location_type'] = '0';
+  $handler->display->display_options['fields']['street_address']['location_op'] = '0';
+  $handler->display->display_options['fields']['street_address']['is_primary'] = 0;
+  $handler->display->display_options['fields']['street_address']['is_billing'] = 0;
+  /* Field: CiviCRM Address: City / Suburb */
+  $handler->display->display_options['fields']['city']['id'] = 'city';
+  $handler->display->display_options['fields']['city']['table'] = 'civicrm_address';
+  $handler->display->display_options['fields']['city']['field'] = 'city';
+  $handler->display->display_options['fields']['city']['relationship'] = 'id';
+  $handler->display->display_options['fields']['city']['label'] = '';
+  $handler->display->display_options['fields']['city']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['city']['location_type'] = '0';
+  $handler->display->display_options['fields']['city']['location_op'] = '0';
+  $handler->display->display_options['fields']['city']['is_primary'] = 0;
+  $handler->display->display_options['fields']['city']['is_billing'] = 0;
+  /* Field: CiviCRM Address: Postal Code */
+  $handler->display->display_options['fields']['postal_code']['id'] = 'postal_code';
+  $handler->display->display_options['fields']['postal_code']['table'] = 'civicrm_address';
+  $handler->display->display_options['fields']['postal_code']['field'] = 'postal_code';
+  $handler->display->display_options['fields']['postal_code']['relationship'] = 'id';
+  $handler->display->display_options['fields']['postal_code']['label'] = '';
+  $handler->display->display_options['fields']['postal_code']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['postal_code']['location_type'] = '0';
+  $handler->display->display_options['fields']['postal_code']['location_op'] = '0';
+  $handler->display->display_options['fields']['postal_code']['is_primary'] = 0;
+  $handler->display->display_options['fields']['postal_code']['is_billing'] = 0;
+  /* Field: Latitude */
+  $handler->display->display_options['fields']['geo_code_1']['id'] = 'geo_code_1';
+  $handler->display->display_options['fields']['geo_code_1']['table'] = 'civicrm_address';
+  $handler->display->display_options['fields']['geo_code_1']['field'] = 'geo_code_1';
+  $handler->display->display_options['fields']['geo_code_1']['relationship'] = 'id';
+  $handler->display->display_options['fields']['geo_code_1']['ui_name'] = 'Latitude';
+  $handler->display->display_options['fields']['geo_code_1']['label'] = '';
+  $handler->display->display_options['fields']['geo_code_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['geo_code_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['geo_code_1']['location_type'] = '0';
+  $handler->display->display_options['fields']['geo_code_1']['location_op'] = '0';
+  $handler->display->display_options['fields']['geo_code_1']['is_primary'] = 0;
+  $handler->display->display_options['fields']['geo_code_1']['is_billing'] = 0;
+  /* Field: Longitude */
+  $handler->display->display_options['fields']['geo_code_2']['id'] = 'geo_code_2';
+  $handler->display->display_options['fields']['geo_code_2']['table'] = 'civicrm_address';
+  $handler->display->display_options['fields']['geo_code_2']['field'] = 'geo_code_2';
+  $handler->display->display_options['fields']['geo_code_2']['relationship'] = 'id';
+  $handler->display->display_options['fields']['geo_code_2']['ui_name'] = 'Longitude';
+  $handler->display->display_options['fields']['geo_code_2']['label'] = '';
+  $handler->display->display_options['fields']['geo_code_2']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['geo_code_2']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['geo_code_2']['location_type'] = '0';
+  $handler->display->display_options['fields']['geo_code_2']['location_op'] = '0';
+  $handler->display->display_options['fields']['geo_code_2']['is_primary'] = 0;
+  $handler->display->display_options['fields']['geo_code_2']['is_billing'] = 0;
+  /* Field: Tooltip */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Tooltip';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '[title]';
+  $handler->display->display_options['fields']['nothing']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  /* Contextual filter: CiviCRM Events: Event ID */
+  $handler->display->display_options['arguments']['id']['id'] = 'id';
+  $handler->display->display_options['arguments']['id']['table'] = 'civicrm_event';
+  $handler->display->display_options['arguments']['id']['field'] = 'id';
+  $handler->display->display_options['arguments']['id']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['id']['default_argument_type'] = 'raw';
+  $handler->display->display_options['arguments']['id']['default_argument_options']['index'] = '1';
+  $handler->display->display_options['arguments']['id']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['id']['summary_options']['items_per_page'] = '25';
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block_address');
+  $translatables['reaching_city_civicrm_event_gmap'] = array(
+    t('Master'),
+    t('<none>'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Address'),
+    t('[title]'),
+    t('All'),
+    t('Block'),
+  );
+  $export['reaching_city_civicrm_event_gmap'] = $view;
+
+  $view = new view();
   $view->name = 'reaching_city_highlights';
   $view->description = '';
   $view->tag = 'default';
@@ -187,7 +371,7 @@ function reaching_the_world_views_default_views() {
   $handler->display->display_options['style_options']['easing'] = '';
   $handler->display->display_options['style_options']['vertical'] = 0;
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Highlight */
+  /* Field: Field: Highlight */
   $handler->display->display_options['fields']['field_highlight']['id'] = 'field_highlight';
   $handler->display->display_options['fields']['field_highlight']['table'] = 'field_data_field_highlight';
   $handler->display->display_options['fields']['field_highlight']['field'] = 'field_highlight';
@@ -216,7 +400,7 @@ function reaching_the_world_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Highlight dates -  start date (field_highlight_dates) */
+  /* Filter criterion: Field: Highlight dates -  start date (field_highlight_dates) */
   $handler->display->display_options['filters']['field_highlight_dates_value']['id'] = 'field_highlight_dates_value';
   $handler->display->display_options['filters']['field_highlight_dates_value']['table'] = 'field_data_field_highlight_dates';
   $handler->display->display_options['filters']['field_highlight_dates_value']['field'] = 'field_highlight_dates_value';
@@ -224,7 +408,7 @@ function reaching_the_world_views_default_views() {
   $handler->display->display_options['filters']['field_highlight_dates_value']['granularity'] = 'second';
   $handler->display->display_options['filters']['field_highlight_dates_value']['form_type'] = 'date_text';
   $handler->display->display_options['filters']['field_highlight_dates_value']['default_date'] = 'now';
-  /* Filter criterion: Content: Highlight dates - end date (field_highlight_dates:value2) */
+  /* Filter criterion: Field: Highlight dates - end date (field_highlight_dates:value2) */
   $handler->display->display_options['filters']['field_highlight_dates_value2']['id'] = 'field_highlight_dates_value2';
   $handler->display->display_options['filters']['field_highlight_dates_value2']['table'] = 'field_data_field_highlight_dates';
   $handler->display->display_options['filters']['field_highlight_dates_value2']['field'] = 'field_highlight_dates_value2';
@@ -232,7 +416,7 @@ function reaching_the_world_views_default_views() {
   $handler->display->display_options['filters']['field_highlight_dates_value2']['granularity'] = 'second';
   $handler->display->display_options['filters']['field_highlight_dates_value2']['form_type'] = 'date_text';
   $handler->display->display_options['filters']['field_highlight_dates_value2']['default_date'] = 'now';
-  /* Filter criterion: Content: Highlight location (field_highlight_location) */
+  /* Filter criterion: Field: Highlight location (field_highlight_location) */
   $handler->display->display_options['filters']['field_highlight_location_tid']['id'] = 'field_highlight_location_tid';
   $handler->display->display_options['filters']['field_highlight_location_tid']['table'] = 'field_data_field_highlight_location';
   $handler->display->display_options['filters']['field_highlight_location_tid']['field'] = 'field_highlight_location_tid';
@@ -247,7 +431,7 @@ function reaching_the_world_views_default_views() {
   /* Display: City page highlights */
   $handler = $view->new_display('block', 'City page highlights', 'block_1');
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Highlight location (field_highlight_location) */
+  /* Contextual filter: Field: Highlight location (field_highlight_location) */
   $handler->display->display_options['arguments']['field_highlight_location_tid']['id'] = 'field_highlight_location_tid';
   $handler->display->display_options['arguments']['field_highlight_location_tid']['table'] = 'field_data_field_highlight_location';
   $handler->display->display_options['arguments']['field_highlight_location_tid']['field'] = 'field_highlight_location_tid';
@@ -278,7 +462,7 @@ if ($city !== false) {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Highlight dates -  start date (field_highlight_dates) */
+  /* Filter criterion: Field: Highlight dates -  start date (field_highlight_dates) */
   $handler->display->display_options['filters']['field_highlight_dates_value']['id'] = 'field_highlight_dates_value';
   $handler->display->display_options['filters']['field_highlight_dates_value']['table'] = 'field_data_field_highlight_dates';
   $handler->display->display_options['filters']['field_highlight_dates_value']['field'] = 'field_highlight_dates_value';
@@ -286,7 +470,7 @@ if ($city !== false) {
   $handler->display->display_options['filters']['field_highlight_dates_value']['granularity'] = 'second';
   $handler->display->display_options['filters']['field_highlight_dates_value']['form_type'] = 'date_text';
   $handler->display->display_options['filters']['field_highlight_dates_value']['default_date'] = 'now';
-  /* Filter criterion: Content: Highlight dates - end date (field_highlight_dates:value2) */
+  /* Filter criterion: Field: Highlight dates - end date (field_highlight_dates:value2) */
   $handler->display->display_options['filters']['field_highlight_dates_value2']['id'] = 'field_highlight_dates_value2';
   $handler->display->display_options['filters']['field_highlight_dates_value2']['table'] = 'field_data_field_highlight_dates';
   $handler->display->display_options['filters']['field_highlight_dates_value2']['field'] = 'field_highlight_dates_value2';
