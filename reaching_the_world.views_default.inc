@@ -324,6 +324,11 @@ function reaching_the_world_views_default_views() {
   $handler->display->display_options['arguments']['id']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['id']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['id']['summary_options']['items_per_page'] = '25';
+  /* Filter criterion: CiviCRM Events: Location Block ID */
+  $handler->display->display_options['filters']['loc_block_id']['id'] = 'loc_block_id';
+  $handler->display->display_options['filters']['loc_block_id']['table'] = 'civicrm_event';
+  $handler->display->display_options['filters']['loc_block_id']['field'] = 'loc_block_id';
+  $handler->display->display_options['filters']['loc_block_id']['operator'] = 'not empty';
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block_address');
@@ -492,6 +497,226 @@ if ($city !== false) {
     t('All'),
   );
   $export['reaching_city_highlights'] = $view;
+
+  $view = new view();
+  $view->name = 'reaching_city_team_gmap';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'civicrm_contact';
+  $view->human_name = 'reaching.city team gMap';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Team map';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['expose_sort_order'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['style_plugin'] = 'gmapextended';
+  $handler->display->display_options['style_options']['fallback_values'] = array(
+    'text' => '',
+    'rmt' => '',
+    'iwq' => '',
+    'iwo' => '',
+    'link' => '',
+    'latitude' => '',
+    'longitude' => '',
+    'title' => '',
+    'markername' => '',
+    'offset' => '',
+  );
+  $handler->display->display_options['style_options']['field_purposes'] = array(
+    'id' => '',
+    'display_name' => 'title',
+    'street_address' => '',
+    'city' => '',
+    'state_province' => '',
+    'postal_code' => '',
+    'geo_code_1' => 'latitude',
+    'geo_code_2' => 'longitude',
+  );
+  $handler->display->display_options['style_options']['macro'] = '[gmap behavior=+autozoom | height=400px]';
+  $handler->display->display_options['style_options']['datasource'] = 'fields';
+  $handler->display->display_options['style_options']['markertype'] = '';
+  $handler->display->display_options['style_options']['center_on_proximityfilter_rel'] = 'none';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'street_address' => 'street_address',
+    'city' => 'city',
+    'state_province' => 'state_province',
+    'postal_code' => 'postal_code',
+  );
+  /* Relationship: CiviCRM Address: Address */
+  $handler->display->display_options['relationships']['id']['id'] = 'id';
+  $handler->display->display_options['relationships']['id']['table'] = 'civicrm_address';
+  $handler->display->display_options['relationships']['id']['field'] = 'id';
+  $handler->display->display_options['relationships']['id']['label'] = 'Address';
+  $handler->display->display_options['relationships']['id']['required'] = TRUE;
+  $handler->display->display_options['relationships']['id']['location_type'] = '0';
+  $handler->display->display_options['relationships']['id']['location_op'] = '0';
+  $handler->display->display_options['relationships']['id']['is_primary'] = 1;
+  /* Field: CiviCRM Contacts: Contact ID */
+  $handler->display->display_options['fields']['id']['id'] = 'id';
+  $handler->display->display_options['fields']['id']['table'] = 'civicrm_contact';
+  $handler->display->display_options['fields']['id']['field'] = 'id';
+  $handler->display->display_options['fields']['id']['label'] = '';
+  $handler->display->display_options['fields']['id']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['id']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['id']['separator'] = '';
+  /* Field: CiviCRM Contacts: Display Name */
+  $handler->display->display_options['fields']['display_name']['id'] = 'display_name';
+  $handler->display->display_options['fields']['display_name']['table'] = 'civicrm_contact';
+  $handler->display->display_options['fields']['display_name']['field'] = 'display_name';
+  $handler->display->display_options['fields']['display_name']['label'] = '';
+  $handler->display->display_options['fields']['display_name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['display_name']['link_to_civicrm_contact'] = 0;
+  /* Field: CiviCRM Address: Full Street Address */
+  $handler->display->display_options['fields']['street_address']['id'] = 'street_address';
+  $handler->display->display_options['fields']['street_address']['table'] = 'civicrm_address';
+  $handler->display->display_options['fields']['street_address']['field'] = 'street_address';
+  $handler->display->display_options['fields']['street_address']['relationship'] = 'id';
+  $handler->display->display_options['fields']['street_address']['label'] = '';
+  $handler->display->display_options['fields']['street_address']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['street_address']['location_type'] = '0';
+  $handler->display->display_options['fields']['street_address']['location_op'] = '0';
+  $handler->display->display_options['fields']['street_address']['is_primary'] = 1;
+  $handler->display->display_options['fields']['street_address']['is_billing'] = 0;
+  /* Field: CiviCRM Address: City / Suburb */
+  $handler->display->display_options['fields']['city']['id'] = 'city';
+  $handler->display->display_options['fields']['city']['table'] = 'civicrm_address';
+  $handler->display->display_options['fields']['city']['field'] = 'city';
+  $handler->display->display_options['fields']['city']['relationship'] = 'id';
+  $handler->display->display_options['fields']['city']['label'] = '';
+  $handler->display->display_options['fields']['city']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['city']['location_type'] = '0';
+  $handler->display->display_options['fields']['city']['location_op'] = '0';
+  $handler->display->display_options['fields']['city']['is_primary'] = 1;
+  $handler->display->display_options['fields']['city']['is_billing'] = 0;
+  /* Field: CiviCRM Address: State/Province */
+  $handler->display->display_options['fields']['state_province']['id'] = 'state_province';
+  $handler->display->display_options['fields']['state_province']['table'] = 'civicrm_address';
+  $handler->display->display_options['fields']['state_province']['field'] = 'state_province';
+  $handler->display->display_options['fields']['state_province']['relationship'] = 'id';
+  $handler->display->display_options['fields']['state_province']['label'] = '';
+  $handler->display->display_options['fields']['state_province']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['state_province']['location_type'] = '0';
+  $handler->display->display_options['fields']['state_province']['location_op'] = '0';
+  $handler->display->display_options['fields']['state_province']['is_primary'] = 1;
+  $handler->display->display_options['fields']['state_province']['is_billing'] = 0;
+  $handler->display->display_options['fields']['state_province']['prov_display'] = '1';
+  /* Field: CiviCRM Address: Postal Code */
+  $handler->display->display_options['fields']['postal_code']['id'] = 'postal_code';
+  $handler->display->display_options['fields']['postal_code']['table'] = 'civicrm_address';
+  $handler->display->display_options['fields']['postal_code']['field'] = 'postal_code';
+  $handler->display->display_options['fields']['postal_code']['relationship'] = 'id';
+  $handler->display->display_options['fields']['postal_code']['label'] = '';
+  $handler->display->display_options['fields']['postal_code']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['postal_code']['location_type'] = '0';
+  $handler->display->display_options['fields']['postal_code']['location_op'] = '0';
+  $handler->display->display_options['fields']['postal_code']['is_primary'] = 1;
+  $handler->display->display_options['fields']['postal_code']['is_billing'] = 0;
+  /* Field: CiviCRM Address: Latitude */
+  $handler->display->display_options['fields']['geo_code_1']['id'] = 'geo_code_1';
+  $handler->display->display_options['fields']['geo_code_1']['table'] = 'civicrm_address';
+  $handler->display->display_options['fields']['geo_code_1']['field'] = 'geo_code_1';
+  $handler->display->display_options['fields']['geo_code_1']['relationship'] = 'id';
+  $handler->display->display_options['fields']['geo_code_1']['label'] = '';
+  $handler->display->display_options['fields']['geo_code_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['geo_code_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['geo_code_1']['location_type'] = '0';
+  $handler->display->display_options['fields']['geo_code_1']['location_op'] = '0';
+  $handler->display->display_options['fields']['geo_code_1']['is_primary'] = 1;
+  $handler->display->display_options['fields']['geo_code_1']['is_billing'] = 0;
+  /* Field: CiviCRM Address: Longitude */
+  $handler->display->display_options['fields']['geo_code_2']['id'] = 'geo_code_2';
+  $handler->display->display_options['fields']['geo_code_2']['table'] = 'civicrm_address';
+  $handler->display->display_options['fields']['geo_code_2']['field'] = 'geo_code_2';
+  $handler->display->display_options['fields']['geo_code_2']['relationship'] = 'id';
+  $handler->display->display_options['fields']['geo_code_2']['label'] = '';
+  $handler->display->display_options['fields']['geo_code_2']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['geo_code_2']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['geo_code_2']['location_type'] = '0';
+  $handler->display->display_options['fields']['geo_code_2']['location_op'] = '0';
+  $handler->display->display_options['fields']['geo_code_2']['is_primary'] = 1;
+  $handler->display->display_options['fields']['geo_code_2']['is_billing'] = 0;
+  /* Filter criterion: CiviCRM Contacts: Contact Sub Type */
+  $handler->display->display_options['filters']['contact_sub_type']['id'] = 'contact_sub_type';
+  $handler->display->display_options['filters']['contact_sub_type']['table'] = 'civicrm_contact';
+  $handler->display->display_options['filters']['contact_sub_type']['field'] = 'contact_sub_type';
+  $handler->display->display_options['filters']['contact_sub_type']['value'] = array(
+    'Team' => 'Team',
+  );
+  /* Filter criterion: CiviCRM Contacts: Contact Type */
+  $handler->display->display_options['filters']['contact_type']['id'] = 'contact_type';
+  $handler->display->display_options['filters']['contact_type']['table'] = 'civicrm_contact';
+  $handler->display->display_options['filters']['contact_type']['field'] = 'contact_type';
+  $handler->display->display_options['filters']['contact_type']['value'] = array(
+    'Household' => 'Household',
+  );
+  /* Filter criterion: CiviCRM Contacts: Contact Sub Type */
+  $handler->display->display_options['filters']['contact_sub_type_1']['id'] = 'contact_sub_type_1';
+  $handler->display->display_options['filters']['contact_sub_type_1']['table'] = 'civicrm_contact';
+  $handler->display->display_options['filters']['contact_sub_type_1']['field'] = 'contact_sub_type';
+  $handler->display->display_options['filters']['contact_sub_type_1']['operator'] = 'not in';
+  $handler->display->display_options['filters']['contact_sub_type_1']['value'] = array(
+    'Archived_team' => 'Archived_team',
+  );
+  /* Filter criterion: CiviCRM Tags: Name */
+  $handler->display->display_options['filters']['name']['id'] = 'name';
+  $handler->display->display_options['filters']['name']['table'] = 'civicrm_tag';
+  $handler->display->display_options['filters']['name']['field'] = 'name';
+  $handler->display->display_options['filters']['name']['value'] = array(
+    19 => '19',
+    7 => '7',
+    33 => '33',
+    54 => '54',
+    17 => '17',
+    8 => '8',
+    9 => '9',
+  );
+  $handler->display->display_options['filters']['name']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['name']['expose']['operator_id'] = 'name_op';
+  $handler->display->display_options['filters']['name']['expose']['label'] = 'Tag';
+  $handler->display->display_options['filters']['name']['expose']['operator'] = 'name_op';
+  $handler->display->display_options['filters']['name']['expose']['identifier'] = 'name';
+  $handler->display->display_options['filters']['name']['expose']['multiple'] = TRUE;
+  $handler->display->display_options['filters']['name']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    5 => 0,
+    6 => 0,
+    7 => 0,
+    3 => 0,
+    4 => 0,
+    8 => 0,
+  );
+  $handler->display->display_options['filters']['name']['expose']['reduce'] = TRUE;
+
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['path'] = 'team-map';
+  $translatables['reaching_city_team_gmap'] = array(
+    t('Master'),
+    t('Team map'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Address'),
+    t('.'),
+    t('Tag'),
+    t('Page'),
+  );
+  $export['reaching_city_team_gmap'] = $view;
 
   return $export;
 }
