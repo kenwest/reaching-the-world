@@ -194,7 +194,7 @@ function reaching_the_world_views_default_views() {
     'latitude' => '',
     'longitude' => '',
     'title' => '',
-    'markername' => 'small bred',
+    'markername' => '',
     'offset' => '',
   );
   $handler->display->display_options['style_options']['field_purposes'] = array(
@@ -208,7 +208,7 @@ function reaching_the_world_views_default_views() {
     'nothing' => 'title',
   );
   $handler->display->display_options['style_options']['datasource'] = 'fields';
-  $handler->display->display_options['style_options']['markertype'] = 'small bred';
+  $handler->display->display_options['style_options']['markertype'] = '';
   $handler->display->display_options['style_options']['center_on_proximityfilter_rel'] = 'none';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['inline'] = array(
