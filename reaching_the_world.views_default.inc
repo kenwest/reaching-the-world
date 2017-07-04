@@ -329,7 +329,7 @@ function reaching_the_world_views_default_views() {
     'latitude' => '',
     'longitude' => '',
     'title' => '',
-    'markername' => '',
+    'markername' => 'CBF',
     'offset' => '',
   );
   $handler->display->display_options['style_options']['field_purposes'] = array(
@@ -343,7 +343,7 @@ function reaching_the_world_views_default_views() {
     'nothing' => 'title',
   );
   $handler->display->display_options['style_options']['datasource'] = 'fields';
-  $handler->display->display_options['style_options']['markertype'] = '';
+  $handler->display->display_options['style_options']['markertype'] = 'CBF';
   $handler->display->display_options['style_options']['center_on_proximityfilter_rel'] = 'none';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['inline'] = array(
@@ -954,7 +954,7 @@ if ($city !== false) {
     'latitude' => '',
     'longitude' => '',
     'title' => '',
-    'markername' => '',
+    'markername' => 'CBF',
     'offset' => '',
   );
   $handler->display->display_options['style_options']['field_purposes'] = array(
@@ -969,7 +969,7 @@ if ($city !== false) {
   );
   $handler->display->display_options['style_options']['macro'] = '[gmap behavior=+autozoom | height=400px]';
   $handler->display->display_options['style_options']['datasource'] = 'fields';
-  $handler->display->display_options['style_options']['markertype'] = '';
+  $handler->display->display_options['style_options']['markertype'] = 'CBF';
   $handler->display->display_options['style_options']['center_on_proximityfilter_rel'] = 'none';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['inline'] = array(

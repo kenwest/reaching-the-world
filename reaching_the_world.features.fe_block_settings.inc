@@ -465,7 +465,7 @@ function reaching_the_world_default_fe_block_settings() {
       ),
     ),
     'title' => '',
-    'visibility' => 0,
+    'visibility' => 1,
   );
 
   $export['views-7d078fcc4085a4be663d6abedc2431af'] = array(
