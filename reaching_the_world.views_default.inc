@@ -368,7 +368,8 @@ function reaching_the_world_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['title']['link_to_civicrm_event'] = 'registration';
+  $handler->display->display_options['fields']['title']['link_to_civicrm_event'] = 'custom';
+  $handler->display->display_options['fields']['title']['custom_link'] = '/civicrm/event/register?reset=1&id=';
   /* Field: CiviCRM Address: Supplemental Street Address */
   $handler->display->display_options['fields']['supplemental_address_1']['id'] = 'supplemental_address_1';
   $handler->display->display_options['fields']['supplemental_address_1']['table'] = 'civicrm_address';
