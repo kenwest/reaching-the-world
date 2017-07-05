@@ -505,12 +505,7 @@ function reaching_the_world_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['grouping'] = array(
     0 => array(
-      'field' => 'field_date_text',
-      'rendered' => 1,
-      'rendered_strip' => 0,
-    ),
-    1 => array(
-      'field' => 'nothing',
+      'field' => 'label',
       'rendered' => 1,
       'rendered_strip' => 0,
     ),
@@ -543,6 +538,14 @@ function reaching_the_world_views_default_views() {
   $handler->display->display_options['fields']['id']['exclude'] = TRUE;
   $handler->display->display_options['fields']['id']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['id']['separator'] = '';
+  /* Field: CiviCRM Price Fields: Label */
+  $handler->display->display_options['fields']['label']['id'] = 'label';
+  $handler->display->display_options['fields']['label']['table'] = 'civicrm_price_field';
+  $handler->display->display_options['fields']['label']['field'] = 'label';
+  $handler->display->display_options['fields']['label']['relationship'] = 'civicrm_price_field';
+  $handler->display->display_options['fields']['label']['label'] = '';
+  $handler->display->display_options['fields']['label']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['label']['element_label_colon'] = FALSE;
   /* Field: CiviCRM Price Field Values: Label */
   $handler->display->display_options['fields']['label_1']['id'] = 'label_1';
   $handler->display->display_options['fields']['label_1']['table'] = 'civicrm_price_field_value';
@@ -621,6 +624,14 @@ function reaching_the_world_views_default_views() {
   $handler->display->display_options['filters']['is_active']['field'] = 'is_active';
   $handler->display->display_options['filters']['is_active']['relationship'] = 'civicrm_price_field';
   $handler->display->display_options['filters']['is_active']['value'] = '1';
+  $handler->display->display_options['filters']['is_active']['group'] = 1;
+  /* Filter criterion: CiviCRM Price Field Values: Is Active */
+  $handler->display->display_options['filters']['is_active_1']['id'] = 'is_active_1';
+  $handler->display->display_options['filters']['is_active_1']['table'] = 'civicrm_price_field_value';
+  $handler->display->display_options['filters']['is_active_1']['field'] = 'is_active';
+  $handler->display->display_options['filters']['is_active_1']['relationship'] = 'civicrm_price_field_value';
+  $handler->display->display_options['filters']['is_active_1']['value'] = '1';
+  $handler->display->display_options['filters']['is_active_1']['group'] = 1;
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
