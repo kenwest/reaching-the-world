@@ -506,7 +506,7 @@ function reaching_the_world_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['grouping'] = array(
     0 => array(
-      'field' => 'label',
+      'field' => 'nothing',
       'rendered' => 1,
       'rendered_strip' => 0,
     ),
@@ -547,6 +547,23 @@ function reaching_the_world_views_default_views() {
   $handler->display->display_options['fields']['label']['label'] = '';
   $handler->display->display_options['fields']['label']['exclude'] = TRUE;
   $handler->display->display_options['fields']['label']['element_label_colon'] = FALSE;
+  /* Field: CiviCRM Price Fields: HTML Type */
+  $handler->display->display_options['fields']['html_type']['id'] = 'html_type';
+  $handler->display->display_options['fields']['html_type']['table'] = 'civicrm_price_field';
+  $handler->display->display_options['fields']['html_type']['field'] = 'html_type';
+  $handler->display->display_options['fields']['html_type']['relationship'] = 'civicrm_price_field';
+  $handler->display->display_options['fields']['html_type']['label'] = '';
+  $handler->display->display_options['fields']['html_type']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['html_type']['element_label_colon'] = FALSE;
+  /* Field: Price field label */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Price field label';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<span class="[html_type]">[label]</span>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Field: CiviCRM Price Field Values: Label */
   $handler->display->display_options['fields']['label_1']['id'] = 'label_1';
   $handler->display->display_options['fields']['label_1']['table'] = 'civicrm_price_field_value';
@@ -649,6 +666,7 @@ function reaching_the_world_views_default_views() {
     t('Price Field'),
     t('Price Field Value'),
     t('.'),
+    t('<span class="[html_type]">[label]</span>'),
     t('All'),
     t('Visibility'),
     t('Block'),
