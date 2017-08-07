@@ -11,6 +11,97 @@ function reaching_the_world_views_default_views() {
   $export = array();
 
   $view = new view();
+  $view->name = 'activity_to_staff';
+  $view->description = 'Lists the staff contacts for an Activity';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'reaching.city Activity to Staff';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = '<i class="fa fa-fw fa-send-o"></i>Contact us';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = 'For more information about this activity, contact';
+  $handler->display->display_options['header']['area']['format'] = '2';
+  /* Relationship: Field: Staff contact (field_staff_contact) */
+  $handler->display->display_options['relationships']['field_staff_contact_contact_id']['id'] = 'field_staff_contact_contact_id';
+  $handler->display->display_options['relationships']['field_staff_contact_contact_id']['table'] = 'field_data_field_staff_contact';
+  $handler->display->display_options['relationships']['field_staff_contact_contact_id']['field'] = 'field_staff_contact_contact_id';
+  $handler->display->display_options['relationships']['field_staff_contact_contact_id']['required'] = TRUE;
+  /* Field: Field: Staff contact */
+  $handler->display->display_options['fields']['field_staff_contact']['id'] = 'field_staff_contact';
+  $handler->display->display_options['fields']['field_staff_contact']['table'] = 'field_data_field_staff_contact';
+  $handler->display->display_options['fields']['field_staff_contact']['field'] = 'field_staff_contact';
+  $handler->display->display_options['fields']['field_staff_contact']['label'] = '';
+  $handler->display->display_options['fields']['field_staff_contact']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_staff_contact']['alter']['text'] = '<a class="staff-contact" href="/staff-contact?cid1=[field_staff_contact-contact_id]">[field_staff_contact]</a>';
+  $handler->display->display_options['fields']['field_staff_contact']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_staff_contact']['type'] = 'civicrm_contact_ref_plain';
+  $handler->display->display_options['fields']['field_staff_contact']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_staff_contact']['delta_offset'] = '0';
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'activity' => 'activity',
+  );
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block');
+  $translatables['activity_to_staff'] = array(
+    t('Master'),
+    t('<i class="fa fa-fw fa-send-o"></i>Contact us'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('For more information about this activity, contact'),
+    t('field_staff_contact'),
+    t('<a class="staff-contact" href="/staff-contact?cid1=[field_staff_contact-contact_id]">[field_staff_contact]</a>'),
+    t('All'),
+    t('Block'),
+  );
+  $export['activity_to_staff'] = $view;
+
+  $view = new view();
   $view->name = 'empty_home_page';
   $view->description = 'An empty home page';
   $view->tag = 'default';
