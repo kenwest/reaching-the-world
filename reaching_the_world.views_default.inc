@@ -979,6 +979,42 @@ function reaching_the_world_views_default_views() {
 
   /* Display: Home page highlights */
   $handler = $view->new_display('block', 'Home page highlights', 'block');
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Field: Highlight location (field_highlight_location) */
+  $handler->display->display_options['filters']['field_highlight_location_tid']['id'] = 'field_highlight_location_tid';
+  $handler->display->display_options['filters']['field_highlight_location_tid']['table'] = 'field_data_field_highlight_location';
+  $handler->display->display_options['filters']['field_highlight_location_tid']['field'] = 'field_highlight_location_tid';
+  $handler->display->display_options['filters']['field_highlight_location_tid']['value'] = array(
+    0 => '1040',
+  );
+  $handler->display->display_options['filters']['field_highlight_location_tid']['group'] = 1;
+  $handler->display->display_options['filters']['field_highlight_location_tid']['vocabulary'] = 'banner';
+  /* Filter criterion: Content: Activity category (field_activity_category) */
+  $handler->display->display_options['filters']['field_activity_category_tid']['id'] = 'field_activity_category_tid';
+  $handler->display->display_options['filters']['field_activity_category_tid']['table'] = 'field_data_field_activity_category';
+  $handler->display->display_options['filters']['field_activity_category_tid']['field'] = 'field_activity_category_tid';
+  $handler->display->display_options['filters']['field_activity_category_tid']['value'] = array(
+    1161 => '1161',
+  );
+  $handler->display->display_options['filters']['field_activity_category_tid']['group'] = 1;
+  $handler->display->display_options['filters']['field_activity_category_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_activity_category_tid']['vocabulary'] = 'activity_category';
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'activity' => 'activity',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
 
   /* Display: City page highlights */
   $handler = $view->new_display('block', 'City page highlights', 'block_1');
@@ -1030,6 +1066,59 @@ if ($city !== false) {
   $handler->display->display_options['filters']['field_highlight_dates_value2']['granularity'] = 'second';
   $handler->display->display_options['filters']['field_highlight_dates_value2']['form_type'] = 'date_text';
   $handler->display->display_options['filters']['field_highlight_dates_value2']['default_date'] = 'now';
+
+  /* Display: City page groups */
+  $handler = $view->new_display('block', 'City page groups', 'block_2');
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Field: Highlight location (field_highlight_location) */
+  $handler->display->display_options['arguments']['field_highlight_location_tid']['id'] = 'field_highlight_location_tid';
+  $handler->display->display_options['arguments']['field_highlight_location_tid']['table'] = 'field_data_field_highlight_location';
+  $handler->display->display_options['arguments']['field_highlight_location_tid']['field'] = 'field_highlight_location_tid';
+  $handler->display->display_options['arguments']['field_highlight_location_tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_highlight_location_tid']['default_argument_type'] = 'php';
+  $handler->display->display_options['arguments']['field_highlight_location_tid']['default_argument_options']['code'] = '$city = cbf_city_string();
+if ($city !== false) {
+  return ucwords($city) . \' city page\';
+} else {
+  return \'nil\';
+}';
+  $handler->display->display_options['arguments']['field_highlight_location_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_highlight_location_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_highlight_location_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_highlight_location_tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_highlight_location_tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['field_highlight_location_tid']['validate_options']['vocabularies'] = array(
+    'banner' => 'banner',
+  );
+  $handler->display->display_options['arguments']['field_highlight_location_tid']['validate_options']['type'] = 'convert';
+  $handler->display->display_options['arguments']['field_highlight_location_tid']['validate']['fail'] = 'empty';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Activity category (field_activity_category) */
+  $handler->display->display_options['filters']['field_activity_category_tid']['id'] = 'field_activity_category_tid';
+  $handler->display->display_options['filters']['field_activity_category_tid']['table'] = 'field_data_field_activity_category';
+  $handler->display->display_options['filters']['field_activity_category_tid']['field'] = 'field_activity_category_tid';
+  $handler->display->display_options['filters']['field_activity_category_tid']['value'] = array(
+    1160 => '1160',
+  );
+  $handler->display->display_options['filters']['field_activity_category_tid']['group'] = 1;
+  $handler->display->display_options['filters']['field_activity_category_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_activity_category_tid']['vocabulary'] = 'activity_category';
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'activity' => 'activity',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
   $translatables['reaching_city_highlights'] = array(
     t('Master'),
     t('<none>'),
@@ -1042,6 +1131,7 @@ if ($city !== false) {
     t('Home page highlights'),
     t('City page highlights'),
     t('All'),
+    t('City page groups'),
   );
   $export['reaching_city_highlights'] = $view;
 
