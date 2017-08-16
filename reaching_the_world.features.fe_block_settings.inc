@@ -50,7 +50,7 @@ function reaching_the_world_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'reaching',
-        'weight' => -65,
+        'weight' => -67,
       ),
       'seven' => array(
         'region' => '',
@@ -164,7 +164,7 @@ function reaching_the_world_default_fe_block_settings() {
         'region' => '',
         'status' => 0,
         'theme' => 'reaching',
-        'weight' => 17,
+        'weight' => 16,
       ),
       'seven' => array(
         'region' => '',
@@ -336,6 +336,69 @@ function reaching_the_world_default_fe_block_settings() {
         'status' => 1,
         'theme' => 'reaching',
         'weight' => -58,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+      'smith' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'smith',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 1,
+  );
+
+  $export['views-5421e9d40abc723e92caa00a1dd228df'] = array(
+    'cache' => -1,
+    'css_class' => 'unbounded',
+    'custom' => 0,
+    'delta' => '5421e9d40abc723e92caa00a1dd228df',
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => 'city/adelaide
+city/brisbane
+city/canberra
+city/hobart
+city/melbourne
+city/perth
+city/sydney',
+    'roles' => array(),
+    'themes' => array(
+      'bootstrap' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bootstrap',
+        'weight' => 0,
+      ),
+      'cbootf' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'cbootf',
+        'weight' => 0,
+      ),
+      'garland' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'garland',
+        'weight' => 0,
+      ),
+      'logoslive' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'logoslive',
+        'weight' => 0,
+      ),
+      'reaching' => array(
+        'region' => 'content',
+        'status' => 1,
+        'theme' => 'reaching',
+        'weight' => -70,
       ),
       'seven' => array(
         'region' => '',

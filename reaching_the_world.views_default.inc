@@ -1069,6 +1069,8 @@ if ($city !== false) {
 
   /* Display: City page groups */
   $handler = $view->new_display('block', 'City page groups', 'block_2');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Get involved in a group';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Field: Highlight location (field_highlight_location) */
   $handler->display->display_options['arguments']['field_highlight_location_tid']['id'] = 'field_highlight_location_tid';
@@ -1132,6 +1134,7 @@ if ($city !== false) {
     t('City page highlights'),
     t('All'),
     t('City page groups'),
+    t('Get involved in a group'),
   );
   $export['reaching_city_highlights'] = $view;
 

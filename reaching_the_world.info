@@ -26,6 +26,7 @@ features[fe_block_settings][] = menu-menu-reaching-city-main-menu
 features[fe_block_settings][] = menu-menu-reaching-city-other-sites
 features[fe_block_settings][] = menu-menu-reaching-city-secondary-men
 features[fe_block_settings][] = views-2e7e463716029c0b8984e98e1cd69c36
+features[fe_block_settings][] = views-5421e9d40abc723e92caa00a1dd228df
 features[fe_block_settings][] = views-58236067d431ce773f8c81e8470bb66a
 features[fe_block_settings][] = views-660e9523f915405c54f1024e71328913
 features[fe_block_settings][] = views-7d078fcc4085a4be663d6abedc2431af
