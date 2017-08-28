@@ -255,7 +255,7 @@ function reaching_the_world_views_default_views() {
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'civicrm_event';
-  $view->human_name = 'reaching.city CiviCRM Event date, location';
+  $view->human_name = 'reaching.city CiviCRM Event location';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
@@ -291,12 +291,6 @@ function reaching_the_world_views_default_views() {
   $handler->display->display_options['fields']['id']['exclude'] = TRUE;
   $handler->display->display_options['fields']['id']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['id']['separator'] = '';
-  /* Field: Field: Date text */
-  $handler->display->display_options['fields']['field_date_text']['id'] = 'field_date_text';
-  $handler->display->display_options['fields']['field_date_text']['table'] = 'field_data_field_date_text';
-  $handler->display->display_options['fields']['field_date_text']['field'] = 'field_date_text';
-  $handler->display->display_options['fields']['field_date_text']['label'] = '';
-  $handler->display->display_options['fields']['field_date_text']['element_label_colon'] = FALSE;
   /* Field: CiviCRM Address: Supplemental Street Address */
   $handler->display->display_options['fields']['supplemental_address_1']['id'] = 'supplemental_address_1';
   $handler->display->display_options['fields']['supplemental_address_1']['table'] = 'civicrm_address';
@@ -304,7 +298,9 @@ function reaching_the_world_views_default_views() {
   $handler->display->display_options['fields']['supplemental_address_1']['relationship'] = 'id';
   $handler->display->display_options['fields']['supplemental_address_1']['label'] = '';
   $handler->display->display_options['fields']['supplemental_address_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['supplemental_address_1']['alter']['text'] = '[supplemental_address_1]<br/>';
   $handler->display->display_options['fields']['supplemental_address_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['supplemental_address_1']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['supplemental_address_1']['location_type'] = '0';
   $handler->display->display_options['fields']['supplemental_address_1']['location_op'] = '0';
   $handler->display->display_options['fields']['supplemental_address_1']['is_primary'] = 0;
@@ -316,7 +312,10 @@ function reaching_the_world_views_default_views() {
   $handler->display->display_options['fields']['street_address']['relationship'] = 'id';
   $handler->display->display_options['fields']['street_address']['label'] = '';
   $handler->display->display_options['fields']['street_address']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['street_address']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['street_address']['alter']['text'] = '[street_address]</br>';
   $handler->display->display_options['fields']['street_address']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['street_address']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['street_address']['location_type'] = '0';
   $handler->display->display_options['fields']['street_address']['location_op'] = '0';
   $handler->display->display_options['fields']['street_address']['is_primary'] = 0;
@@ -351,7 +350,8 @@ function reaching_the_world_views_default_views() {
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['ui_name'] = 'Address details';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '[supplemental_address_1] [street_address]<br/>
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '[supplemental_address_1]
+[street_address]
 [city] [postal_code]';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Contextual filter: CiviCRM Events: Event ID */
@@ -378,7 +378,10 @@ function reaching_the_world_views_default_views() {
     t('Desc'),
     t('Address'),
     t('.'),
-    t('[supplemental_address_1] [street_address]<br/>
+    t('[supplemental_address_1]<br/>'),
+    t('[street_address]</br>'),
+    t('[supplemental_address_1]
+[street_address]
 [city] [postal_code]'),
     t('All'),
     t('Block'),
