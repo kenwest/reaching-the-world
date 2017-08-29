@@ -170,6 +170,128 @@ function reaching_the_world_views_default_views() {
   $export['empty_home_page'] = $view;
 
   $view = new view();
+  $view->name = 'reaching_city_activity_to_civievent';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'civicrm_event';
+  $view->human_name = 'reaching.city Activity to CiviEvent';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = '<i class="fa fa-fw fa-calendar"></i>Upcoming events';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: CiviCRM Events: Event ID */
+  $handler->display->display_options['fields']['id']['id'] = 'id';
+  $handler->display->display_options['fields']['id']['table'] = 'civicrm_event';
+  $handler->display->display_options['fields']['id']['field'] = 'id';
+  $handler->display->display_options['fields']['id']['label'] = '';
+  $handler->display->display_options['fields']['id']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['id']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['id']['separator'] = '';
+  /* Field: Field: Image */
+  $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
+  $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['label'] = '';
+  $handler->display->display_options['fields']['field_image']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image']['settings'] = array(
+    'image_style' => 'thumbnail',
+    'image_link' => '',
+  );
+  /* Field: Field: Thumbnail image */
+  $handler->display->display_options['fields']['field_thumbnail_image']['id'] = 'field_thumbnail_image';
+  $handler->display->display_options['fields']['field_thumbnail_image']['table'] = 'field_data_field_thumbnail_image';
+  $handler->display->display_options['fields']['field_thumbnail_image']['field'] = 'field_thumbnail_image';
+  $handler->display->display_options['fields']['field_thumbnail_image']['label'] = '';
+  $handler->display->display_options['fields']['field_thumbnail_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_thumbnail_image']['empty'] = '[field_image]';
+  $handler->display->display_options['fields']['field_thumbnail_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_thumbnail_image']['settings'] = array(
+    'image_style' => 'thumbnail',
+    'image_link' => '',
+  );
+  /* Field: CiviCRM Events: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'civicrm_event';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_wrapper_type'] = 'h3';
+  $handler->display->display_options['fields']['title']['link_to_civicrm_event'] = 'custom';
+  $handler->display->display_options['fields']['title']['custom_link'] = 'civicrm-event/';
+  /* Field: Field: Date text */
+  $handler->display->display_options['fields']['field_date_text']['id'] = 'field_date_text';
+  $handler->display->display_options['fields']['field_date_text']['table'] = 'field_data_field_date_text';
+  $handler->display->display_options['fields']['field_date_text']['field'] = 'field_date_text';
+  $handler->display->display_options['fields']['field_date_text']['label'] = '';
+  $handler->display->display_options['fields']['field_date_text']['element_label_colon'] = FALSE;
+  /* Field: CiviCRM Events: Summary */
+  $handler->display->display_options['fields']['summary']['id'] = 'summary';
+  $handler->display->display_options['fields']['summary']['table'] = 'civicrm_event';
+  $handler->display->display_options['fields']['summary']['field'] = 'summary';
+  $handler->display->display_options['fields']['summary']['label'] = '';
+  $handler->display->display_options['fields']['summary']['element_label_colon'] = FALSE;
+  /* Sort criterion: Field: Sort Order (field_sort_order) */
+  $handler->display->display_options['sorts']['field_sort_order_value']['id'] = 'field_sort_order_value';
+  $handler->display->display_options['sorts']['field_sort_order_value']['table'] = 'field_data_field_sort_order';
+  $handler->display->display_options['sorts']['field_sort_order_value']['field'] = 'field_sort_order_value';
+  /* Contextual filter: Field: Activity (field_in_activity) */
+  $handler->display->display_options['arguments']['field_in_activity_target_id']['id'] = 'field_in_activity_target_id';
+  $handler->display->display_options['arguments']['field_in_activity_target_id']['table'] = 'field_data_field_in_activity';
+  $handler->display->display_options['arguments']['field_in_activity_target_id']['field'] = 'field_in_activity_target_id';
+  $handler->display->display_options['arguments']['field_in_activity_target_id']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_in_activity_target_id']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['field_in_activity_target_id']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_in_activity_target_id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_in_activity_target_id']['summary_options']['items_per_page'] = '25';
+  /* Filter criterion: Field: Next action (field_next_action) */
+  $handler->display->display_options['filters']['field_next_action_value']['id'] = 'field_next_action_value';
+  $handler->display->display_options['filters']['field_next_action_value']['table'] = 'field_data_field_next_action';
+  $handler->display->display_options['filters']['field_next_action_value']['field'] = 'field_next_action_value';
+  $handler->display->display_options['filters']['field_next_action_value']['operator'] = '!=';
+  $handler->display->display_options['filters']['field_next_action_value']['value'] = '0';
+  /* Filter criterion: CiviCRM Events: Is Public */
+  $handler->display->display_options['filters']['is_public']['id'] = 'is_public';
+  $handler->display->display_options['filters']['is_public']['table'] = 'civicrm_event';
+  $handler->display->display_options['filters']['is_public']['field'] = 'is_public';
+  $handler->display->display_options['filters']['is_public']['value'] = '1';
+
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['path'] = 'civicrm-events/activity/%';
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block_1');
+  $translatables['reaching_city_activity_to_civievent'] = array(
+    t('Master'),
+    t('<i class="fa fa-fw fa-calendar"></i>Upcoming events'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('.'),
+    t('[field_image]'),
+    t('All'),
+    t('Page'),
+    t('Block'),
+  );
+  $export['reaching_city_activity_to_civievent'] = $view;
+
+  $view = new view();
   $view->name = 'reaching_city_city_page';
   $view->description = 'Avoids use of campus_homepage and handles \'all\' better';
   $view->tag = 'default';

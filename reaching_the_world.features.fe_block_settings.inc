@@ -588,6 +588,60 @@ city/sydney',
     'visibility' => 1,
   );
 
+  $export['views-92dbae79c70cb5f0b4d063d293638c17'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'delta' => '92dbae79c70cb5f0b4d063d293638c17',
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bootstrap' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bootstrap',
+        'weight' => 0,
+      ),
+      'cbootf' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'cbootf',
+        'weight' => 0,
+      ),
+      'garland' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'garland',
+        'weight' => 0,
+      ),
+      'logoslive' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'logoslive',
+        'weight' => 0,
+      ),
+      'reaching' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'reaching',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+      'smith' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'smith',
+        'weight' => 0,
+      ),
+    ),
+  );
+
   $export['views-activity_to_staff-block'] = array(
     'cache' => -1,
     'css_class' => '',
