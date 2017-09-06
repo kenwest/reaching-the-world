@@ -5,3 +5,4 @@
 #
 
 chmod g-w -R .
+grep private *

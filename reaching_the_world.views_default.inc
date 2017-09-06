@@ -1128,7 +1128,8 @@ function reaching_the_world_views_default_views() {
   $handler->display->display_options['filters']['field_activity_category_tid']['table'] = 'field_data_field_activity_category';
   $handler->display->display_options['filters']['field_activity_category_tid']['field'] = 'field_activity_category_tid';
   $handler->display->display_options['filters']['field_activity_category_tid']['value'] = array(
-    1161 => '1161',
+    1183 => '1183',
+    1184 => '1184',
   );
   $handler->display->display_options['filters']['field_activity_category_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_activity_category_tid']['type'] = 'select';
@@ -1196,7 +1197,7 @@ if ($city !== false) {
   /* Display: City page groups */
   $handler = $view->new_display('block', 'City page groups', 'block_2');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Get involved in a group';
+  $handler->display->display_options['title'] = 'Get involved';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Field: Highlight location (field_highlight_location) */
   $handler->display->display_options['arguments']['field_highlight_location_tid']['id'] = 'field_highlight_location_tid';
@@ -1234,7 +1235,7 @@ if ($city !== false) {
   $handler->display->display_options['filters']['field_activity_category_tid']['table'] = 'field_data_field_activity_category';
   $handler->display->display_options['filters']['field_activity_category_tid']['field'] = 'field_activity_category_tid';
   $handler->display->display_options['filters']['field_activity_category_tid']['value'] = array(
-    1160 => '1160',
+    1183 => '1183',
   );
   $handler->display->display_options['filters']['field_activity_category_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_activity_category_tid']['type'] = 'select';
@@ -1260,7 +1261,7 @@ if ($city !== false) {
     t('City page highlights'),
     t('All'),
     t('City page groups'),
-    t('Get involved in a group'),
+    t('Get involved'),
   );
   $export['reaching_city_highlights'] = $view;
 
