@@ -5,4 +5,4 @@
 #
 
 chmod g-w -R .
-grep private *
+grep private -r * | grep -v "post\.sh"
