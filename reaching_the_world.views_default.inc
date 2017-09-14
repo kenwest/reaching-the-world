@@ -1266,6 +1266,405 @@ if ($city !== false) {
   $export['reaching_city_highlights'] = $view;
 
   $view = new view();
+  $view->name = 'reaching_city_national_blog';
+  $view->description = 'Check out our blog for some interesting thoughts on the big questions';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'reaching.city National Blog';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = '<i class="fa fa-fw fa-comment-o"></i>Blog';
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['use_more_always'] = TRUE;
+  $handler->display->display_options['link_display'] = 'page_1';
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'time';
+  $handler->display->display_options['cache']['results_lifespan'] = '1800';
+  $handler->display->display_options['cache']['results_lifespan_custom'] = '86400';
+  $handler->display->display_options['cache']['output_lifespan'] = '1800';
+  $handler->display->display_options['cache']['output_lifespan_custom'] = '86400';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'description',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+  );
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['hide_empty'] = TRUE;
+  /* Field: Field: Image */
+  $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
+  $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['label'] = '';
+  $handler->display->display_options['fields']['field_image']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image']['settings'] = array(
+    'image_style' => 'thumbnail',
+    'image_link' => '',
+  );
+  /* Field: Field: Thumbnail image */
+  $handler->display->display_options['fields']['field_thumbnail_image']['id'] = 'field_thumbnail_image';
+  $handler->display->display_options['fields']['field_thumbnail_image']['table'] = 'field_data_field_thumbnail_image';
+  $handler->display->display_options['fields']['field_thumbnail_image']['field'] = 'field_thumbnail_image';
+  $handler->display->display_options['fields']['field_thumbnail_image']['label'] = '';
+  $handler->display->display_options['fields']['field_thumbnail_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_thumbnail_image']['empty'] = '[field_image]';
+  $handler->display->display_options['fields']['field_thumbnail_image']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_thumbnail_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_thumbnail_image']['settings'] = array(
+    'image_style' => 'thumbnail',
+    'image_link' => '',
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_wrapper_type'] = 'h3';
+  /* Field: Field: Activity */
+  $handler->display->display_options['fields']['field_in_activity']['id'] = 'field_in_activity';
+  $handler->display->display_options['fields']['field_in_activity']['table'] = 'field_data_field_in_activity';
+  $handler->display->display_options['fields']['field_in_activity']['field'] = 'field_in_activity';
+  $handler->display->display_options['fields']['field_in_activity']['label'] = '';
+  $handler->display->display_options['fields']['field_in_activity']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_in_activity']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_in_activity']['settings'] = array(
+    'link' => 0,
+  );
+  /* Field: Field: Date text */
+  $handler->display->display_options['fields']['field_date_text']['id'] = 'field_date_text';
+  $handler->display->display_options['fields']['field_date_text']['table'] = 'field_data_field_date_text';
+  $handler->display->display_options['fields']['field_date_text']['field'] = 'field_date_text';
+  $handler->display->display_options['fields']['field_date_text']['label'] = '';
+  $handler->display->display_options['fields']['field_date_text']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_date_text']['hide_empty'] = TRUE;
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['trim_whitespace'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '150',
+  );
+  /* Field: Content: Subtitle */
+  $handler->display->display_options['fields']['field_subtitle']['id'] = 'field_subtitle';
+  $handler->display->display_options['fields']['field_subtitle']['table'] = 'field_data_field_subtitle';
+  $handler->display->display_options['fields']['field_subtitle']['field'] = 'field_subtitle';
+  $handler->display->display_options['fields']['field_subtitle']['label'] = '';
+  $handler->display->display_options['fields']['field_subtitle']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_subtitle']['empty'] = '[body]';
+  /* Sort criterion: Content: Date (field_episode_date) */
+  $handler->display->display_options['sorts']['field_episode_date_value']['id'] = 'field_episode_date_value';
+  $handler->display->display_options['sorts']['field_episode_date_value']['table'] = 'field_data_field_episode_date';
+  $handler->display->display_options['sorts']['field_episode_date_value']['field'] = 'field_episode_date_value';
+  $handler->display->display_options['sorts']['field_episode_date_value']['order'] = 'DESC';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'blog' => 'blog',
+  );
+
+  /* Display: Block: recent blogs */
+  $handler = $view->new_display('block', 'Block: recent blogs', 'block');
+
+  /* Display: Block: popular blogs */
+  $handler = $view->new_display('block', 'Block: popular blogs', 'block_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = '<i class="fa fa-fw fa-comment-o"></i>Popular';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content statistics: Total views */
+  $handler->display->display_options['sorts']['totalcount']['id'] = 'totalcount';
+  $handler->display->display_options['sorts']['totalcount']['table'] = 'node_counter';
+  $handler->display->display_options['sorts']['totalcount']['field'] = 'totalcount';
+  $handler->display->display_options['sorts']['totalcount']['order'] = 'DESC';
+  /* Sort criterion: Content: Date (field_episode_date) */
+  $handler->display->display_options['sorts']['field_episode_date_value']['id'] = 'field_episode_date_value';
+  $handler->display->display_options['sorts']['field_episode_date_value']['table'] = 'field_data_field_episode_date';
+  $handler->display->display_options['sorts']['field_episode_date_value']['field'] = 'field_episode_date_value';
+  $handler->display->display_options['sorts']['field_episode_date_value']['order'] = 'DESC';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'blog' => 'blog',
+  );
+  /* Filter criterion: Content: Date (field_episode_date) */
+  $handler->display->display_options['filters']['field_episode_date_value']['id'] = 'field_episode_date_value';
+  $handler->display->display_options['filters']['field_episode_date_value']['table'] = 'field_data_field_episode_date';
+  $handler->display->display_options['filters']['field_episode_date_value']['field'] = 'field_episode_date_value';
+  $handler->display->display_options['filters']['field_episode_date_value']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_episode_date_value']['default_date'] = 'now -3 month';
+  $handler->display->display_options['filters']['field_episode_date_value']['year_range'] = '-1:+1';
+  $translatables['reaching_city_national_blog'] = array(
+    t('Master'),
+    t('<i class="fa fa-fw fa-comment-o"></i>Blog'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('[field_image]'),
+    t('[body]'),
+    t('Block: recent blogs'),
+    t('Block: popular blogs'),
+    t('<i class="fa fa-fw fa-comment-o"></i>Popular'),
+  );
+  $export['reaching_city_national_blog'] = $view;
+
+  $view = new view();
+  $view->name = 'reaching_city_national_library';
+  $view->description = 'Browse our public library for some challenging takes on the big questions';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'reaching.city National Library';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = '<i class="fa fa-fw fa-university"></i>Library';
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['use_more_always'] = TRUE;
+  $handler->display->display_options['link_display'] = 'page_1';
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'time';
+  $handler->display->display_options['cache']['results_lifespan'] = '1800';
+  $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
+  $handler->display->display_options['cache']['output_lifespan'] = '1800';
+  $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'description',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+  );
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: Is video */
+  $handler->display->display_options['fields']['field_is_video']['id'] = 'field_is_video';
+  $handler->display->display_options['fields']['field_is_video']['table'] = 'field_data_field_is_video';
+  $handler->display->display_options['fields']['field_is_video']['field'] = 'field_is_video';
+  $handler->display->display_options['fields']['field_is_video']['label'] = '';
+  $handler->display->display_options['fields']['field_is_video']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_is_video']['alter']['text'] = '<i class="fa fa-fw fa-youtube-play"></i>';
+  $handler->display->display_options['fields']['field_is_video']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_is_video']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_is_video']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_is_video']['type'] = 'computed_field_computed_value';
+  /* Field: Content: Is audio */
+  $handler->display->display_options['fields']['field_is_audio']['id'] = 'field_is_audio';
+  $handler->display->display_options['fields']['field_is_audio']['table'] = 'field_data_field_is_audio';
+  $handler->display->display_options['fields']['field_is_audio']['field'] = 'field_is_audio';
+  $handler->display->display_options['fields']['field_is_audio']['label'] = '';
+  $handler->display->display_options['fields']['field_is_audio']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_is_audio']['alter']['text'] = '<i class="fa fa-fw fa-microphone"></i>';
+  $handler->display->display_options['fields']['field_is_audio']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_is_audio']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_is_audio']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_is_audio']['type'] = 'computed_field_computed_value';
+  /* Field: Content: Is text */
+  $handler->display->display_options['fields']['field_is_text']['id'] = 'field_is_text';
+  $handler->display->display_options['fields']['field_is_text']['table'] = 'field_data_field_is_text';
+  $handler->display->display_options['fields']['field_is_text']['field'] = 'field_is_text';
+  $handler->display->display_options['fields']['field_is_text']['label'] = '';
+  $handler->display->display_options['fields']['field_is_text']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_is_text']['alter']['text'] = '<i class="fa fa-fw fa-file-pdf-o"></i>';
+  $handler->display->display_options['fields']['field_is_text']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_is_text']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_is_text']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_is_text']['type'] = 'computed_field_computed_value';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_wrapper_type'] = 'h3';
+  /* Field: Field: Activity */
+  $handler->display->display_options['fields']['field_in_activity']['id'] = 'field_in_activity';
+  $handler->display->display_options['fields']['field_in_activity']['table'] = 'field_data_field_in_activity';
+  $handler->display->display_options['fields']['field_in_activity']['field'] = 'field_in_activity';
+  $handler->display->display_options['fields']['field_in_activity']['label'] = '';
+  $handler->display->display_options['fields']['field_in_activity']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_in_activity']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_in_activity']['settings'] = array(
+    'link' => 0,
+  );
+  /* Field: Content: Speaker(s) */
+  $handler->display->display_options['fields']['field_speakers']['id'] = 'field_speakers';
+  $handler->display->display_options['fields']['field_speakers']['table'] = 'field_data_field_speakers';
+  $handler->display->display_options['fields']['field_speakers']['field'] = 'field_speakers';
+  $handler->display->display_options['fields']['field_speakers']['label'] = '';
+  $handler->display->display_options['fields']['field_speakers']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_speakers']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_speakers']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_speakers']['delta_offset'] = '0';
+  /* Field: Field: Date text */
+  $handler->display->display_options['fields']['field_date_text']['id'] = 'field_date_text';
+  $handler->display->display_options['fields']['field_date_text']['table'] = 'field_data_field_date_text';
+  $handler->display->display_options['fields']['field_date_text']['field'] = 'field_date_text';
+  $handler->display->display_options['fields']['field_date_text']['label'] = '';
+  $handler->display->display_options['fields']['field_date_text']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_date_text']['hide_empty'] = TRUE;
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['trim_whitespace'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '150',
+  );
+  /* Field: Content: Subtitle */
+  $handler->display->display_options['fields']['field_subtitle']['id'] = 'field_subtitle';
+  $handler->display->display_options['fields']['field_subtitle']['table'] = 'field_data_field_subtitle';
+  $handler->display->display_options['fields']['field_subtitle']['field'] = 'field_subtitle';
+  $handler->display->display_options['fields']['field_subtitle']['label'] = '';
+  $handler->display->display_options['fields']['field_subtitle']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_subtitle']['empty'] = '[body]';
+  /* Sort criterion: Content: Date (field_episode_date) */
+  $handler->display->display_options['sorts']['field_episode_date_value']['id'] = 'field_episode_date_value';
+  $handler->display->display_options['sorts']['field_episode_date_value']['table'] = 'field_data_field_episode_date';
+  $handler->display->display_options['sorts']['field_episode_date_value']['field'] = 'field_episode_date_value';
+  $handler->display->display_options['sorts']['field_episode_date_value']['order'] = 'DESC';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'episode' => 'episode',
+  );
+
+  /* Display: Block: recent library */
+  $handler = $view->new_display('block', 'Block: recent library', 'block');
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Sort criterion: Content: Date (field_episode_date) */
+  $handler->display->display_options['sorts']['field_episode_date_value']['id'] = 'field_episode_date_value';
+  $handler->display->display_options['sorts']['field_episode_date_value']['table'] = 'field_data_field_episode_date';
+  $handler->display->display_options['sorts']['field_episode_date_value']['field'] = 'field_episode_date_value';
+  $handler->display->display_options['sorts']['field_episode_date_value']['order'] = 'DESC';
+
+  /* Display: Block: popular library */
+  $handler = $view->new_display('block', 'Block: popular library', 'block_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = '<i class="fa fa-fw fa-university"></i>Popular';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content statistics: Total views */
+  $handler->display->display_options['sorts']['totalcount']['id'] = 'totalcount';
+  $handler->display->display_options['sorts']['totalcount']['table'] = 'node_counter';
+  $handler->display->display_options['sorts']['totalcount']['field'] = 'totalcount';
+  $handler->display->display_options['sorts']['totalcount']['order'] = 'DESC';
+  /* Sort criterion: Content: Date (field_episode_date) */
+  $handler->display->display_options['sorts']['field_episode_date_value']['id'] = 'field_episode_date_value';
+  $handler->display->display_options['sorts']['field_episode_date_value']['table'] = 'field_data_field_episode_date';
+  $handler->display->display_options['sorts']['field_episode_date_value']['field'] = 'field_episode_date_value';
+  $handler->display->display_options['sorts']['field_episode_date_value']['order'] = 'DESC';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'episode' => 'episode',
+  );
+  /* Filter criterion: Content: Date (field_episode_date) */
+  $handler->display->display_options['filters']['field_episode_date_value']['id'] = 'field_episode_date_value';
+  $handler->display->display_options['filters']['field_episode_date_value']['table'] = 'field_data_field_episode_date';
+  $handler->display->display_options['filters']['field_episode_date_value']['field'] = 'field_episode_date_value';
+  $handler->display->display_options['filters']['field_episode_date_value']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_episode_date_value']['default_date'] = 'now -1 year';
+  $handler->display->display_options['filters']['field_episode_date_value']['year_range'] = '-1:+1';
+  $translatables['reaching_city_national_library'] = array(
+    t('Master'),
+    t('<i class="fa fa-fw fa-university"></i>Library'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('<i class="fa fa-fw fa-youtube-play"></i>'),
+    t('<i class="fa fa-fw fa-microphone"></i>'),
+    t('<i class="fa fa-fw fa-file-pdf-o"></i>'),
+    t('[body]'),
+    t('Block: recent library'),
+    t('Block: popular library'),
+    t('<i class="fa fa-fw fa-university"></i>Popular'),
+  );
+  $export['reaching_city_national_library'] = $view;
+
+  $view = new view();
   $view->name = 'reaching_city_team_gmap';
   $view->description = '';
   $view->tag = 'default';

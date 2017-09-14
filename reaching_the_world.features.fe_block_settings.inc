@@ -354,6 +354,126 @@ function reaching_the_world_default_fe_block_settings() {
     'visibility' => 1,
   );
 
+  $export['views-3b234379a78f2c26c23c8eba0ecc1f46'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => '3b234379a78f2c26c23c8eba0ecc1f46',
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => 'city/adelaide
+city/brisbane
+city/canberra
+city/hobart
+city/melbourne
+city/perth
+city/sydney',
+    'roles' => array(),
+    'themes' => array(
+      'bootstrap' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bootstrap',
+        'weight' => 0,
+      ),
+      'cbootf' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'cbootf',
+        'weight' => 0,
+      ),
+      'garland' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'garland',
+        'weight' => 0,
+      ),
+      'logoslive' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'logoslive',
+        'weight' => 0,
+      ),
+      'reaching' => array(
+        'region' => 'content_second',
+        'status' => 1,
+        'theme' => 'reaching',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+      'smith' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'smith',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
+  $export['views-4b8a204015623578778937c8b62ab69a'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => '4b8a204015623578778937c8b62ab69a',
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bootstrap' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bootstrap',
+        'weight' => 0,
+      ),
+      'cbootf' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'cbootf',
+        'weight' => 0,
+      ),
+      'garland' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'garland',
+        'weight' => 0,
+      ),
+      'logoslive' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'logoslive',
+        'weight' => 0,
+      ),
+      'reaching' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'reaching',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+      'smith' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'smith',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
   $export['views-5421e9d40abc723e92caa00a1dd228df'] = array(
     'cache' => -1,
     'css_class' => 'unbounded',
@@ -395,7 +515,7 @@ city/sydney',
         'weight' => 0,
       ),
       'reaching' => array(
-        'region' => 'content',
+        'region' => 'banner_second',
         'status' => 1,
         'theme' => 'reaching',
         'weight' => -69,
@@ -586,6 +706,63 @@ city/sydney',
     ),
     'title' => '',
     'visibility' => 1,
+  );
+
+  $export['views-91265aa40c06744963c1a1b3b7f4a3f8'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => '91265aa40c06744963c1a1b3b7f4a3f8',
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bootstrap' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bootstrap',
+        'weight' => 0,
+      ),
+      'cbootf' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'cbootf',
+        'weight' => 0,
+      ),
+      'garland' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'garland',
+        'weight' => 0,
+      ),
+      'logoslive' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'logoslive',
+        'weight' => 0,
+      ),
+      'reaching' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'reaching',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+      'smith' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'smith',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
   );
 
   $export['views-92dbae79c70cb5f0b4d063d293638c17'] = array(
@@ -820,6 +997,69 @@ city/sydney',
     ),
     'title' => '<none>',
     'visibility' => 1,
+  );
+
+  $export['views-d0668354e2c9477b84ce436b821385e0'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'd0668354e2c9477b84ce436b821385e0',
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => 'city/adelaide
+city/brisbane
+city/canberra
+city/hobart
+city/melbourne
+city/perth
+city/sydney',
+    'roles' => array(),
+    'themes' => array(
+      'bootstrap' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bootstrap',
+        'weight' => 0,
+      ),
+      'cbootf' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'cbootf',
+        'weight' => 0,
+      ),
+      'garland' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'garland',
+        'weight' => 0,
+      ),
+      'logoslive' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'logoslive',
+        'weight' => 0,
+      ),
+      'reaching' => array(
+        'region' => 'content_second',
+        'status' => 1,
+        'theme' => 'reaching',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+      'smith' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'smith',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
   );
 
   $export['views-reaching_city_highlights-block'] = array(

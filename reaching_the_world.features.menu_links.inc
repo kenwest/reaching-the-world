@@ -115,20 +115,20 @@ function reaching_the_world_menu_default_menu_links() {
     'weight' => -48,
     'customized' => 1,
   );
-  // Exported menu link: menu-reaching-city-main-menu_about-us:node/13.
-  $menu_links['menu-reaching-city-main-menu_about-us:node/13'] = array(
+  // Exported menu link: menu-reaching-city-main-menu_about-us:node/3075.
+  $menu_links['menu-reaching-city-main-menu_about-us:node/3075'] = array(
     'menu_name' => 'menu-reaching-city-main-menu',
-    'link_path' => 'node/13',
+    'link_path' => 'node/3075',
     'router_path' => 'node/%',
     'link_title' => 'About us',
     'options' => array(
+      'identifier' => 'menu-reaching-city-main-menu_about-us:node/3075',
       'attributes' => array(),
       'item_attributes' => array(
         'id' => '',
         'class' => '',
         'style' => '',
       ),
-      'identifier' => 'menu-reaching-city-main-menu_about-us:node/13',
     ),
     'module' => 'menu',
     'hidden' => 0,
