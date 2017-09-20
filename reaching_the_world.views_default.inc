@@ -373,6 +373,187 @@ function reaching_the_world_views_default_views() {
   $export['reaching_city_city_page'] = $view;
 
   $view = new view();
+  $view->name = 'reaching_city_city_to_activity';
+  $view->description = 'Check out the activities we run near you';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'reaching.city City to Activity';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = '<none>';
+  $handler->display->display_options['use_more_always'] = TRUE;
+  $handler->display->display_options['link_display'] = 'page_1';
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'time';
+  $handler->display->display_options['cache']['results_lifespan'] = 'custom';
+  $handler->display->display_options['cache']['results_lifespan_custom'] = '86400';
+  $handler->display->display_options['cache']['output_lifespan'] = 'custom';
+  $handler->display->display_options['cache']['output_lifespan_custom'] = '86400';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'field_subtitle_1',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+    1 => array(
+      'field' => 'nothing',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+    2 => array(
+      'field' => 'description',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+    3 => array(
+      'field' => 'description_1',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+  );
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['hide_empty'] = TRUE;
+  /* Relationship: Field: Audience (taxonomy_vocabulary_3) */
+  $handler->display->display_options['relationships']['taxonomy_vocabulary_3_tid']['id'] = 'taxonomy_vocabulary_3_tid';
+  $handler->display->display_options['relationships']['taxonomy_vocabulary_3_tid']['table'] = 'field_data_taxonomy_vocabulary_3';
+  $handler->display->display_options['relationships']['taxonomy_vocabulary_3_tid']['field'] = 'taxonomy_vocabulary_3_tid';
+  $handler->display->display_options['relationships']['taxonomy_vocabulary_3_tid']['label'] = 'Audience';
+  $handler->display->display_options['relationships']['taxonomy_vocabulary_3_tid']['required'] = TRUE;
+  /* Relationship: Content: Activity category (field_activity_category) */
+  $handler->display->display_options['relationships']['field_activity_category_tid']['id'] = 'field_activity_category_tid';
+  $handler->display->display_options['relationships']['field_activity_category_tid']['table'] = 'field_data_field_activity_category';
+  $handler->display->display_options['relationships']['field_activity_category_tid']['field'] = 'field_activity_category_tid';
+  $handler->display->display_options['relationships']['field_activity_category_tid']['label'] = 'Activity category';
+  $handler->display->display_options['relationships']['field_activity_category_tid']['required'] = TRUE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: reaching.city Title */
+  $handler->display->display_options['fields']['field_subtitle_1']['id'] = 'field_subtitle_1';
+  $handler->display->display_options['fields']['field_subtitle_1']['table'] = 'field_data_field_subtitle';
+  $handler->display->display_options['fields']['field_subtitle_1']['field'] = 'field_subtitle';
+  $handler->display->display_options['fields']['field_subtitle_1']['relationship'] = 'taxonomy_vocabulary_3_tid';
+  $handler->display->display_options['fields']['field_subtitle_1']['ui_name'] = 'reaching.city Title';
+  $handler->display->display_options['fields']['field_subtitle_1']['label'] = '';
+  $handler->display->display_options['fields']['field_subtitle_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_subtitle_1']['element_label_colon'] = FALSE;
+  /* Field: Taxonomy term: Term description */
+  $handler->display->display_options['fields']['description_1']['id'] = 'description_1';
+  $handler->display->display_options['fields']['description_1']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['description_1']['field'] = 'description';
+  $handler->display->display_options['fields']['description_1']['relationship'] = 'field_activity_category_tid';
+  $handler->display->display_options['fields']['description_1']['label'] = '';
+  $handler->display->display_options['fields']['description_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['description_1']['element_label_colon'] = FALSE;
+  /* Field: Grouping field for Bootstrap column */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Grouping field for Bootstrap column';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '&nbsp;';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  /* Field:  Grouping field for Bootstrap row */
+  $handler->display->display_options['fields']['description']['id'] = 'description';
+  $handler->display->display_options['fields']['description']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['description']['field'] = 'description';
+  $handler->display->display_options['fields']['description']['relationship'] = 'field_activity_category_tid';
+  $handler->display->display_options['fields']['description']['ui_name'] = ' Grouping field for Bootstrap row';
+  $handler->display->display_options['fields']['description']['label'] = '';
+  $handler->display->display_options['fields']['description']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
+  /* Sort criterion: Taxonomy term: Weight */
+  $handler->display->display_options['sorts']['weight_1']['id'] = 'weight_1';
+  $handler->display->display_options['sorts']['weight_1']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['sorts']['weight_1']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight_1']['relationship'] = 'taxonomy_vocabulary_3_tid';
+  /* Sort criterion: Taxonomy term: Weight */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['relationship'] = 'field_activity_category_tid';
+  /* Sort criterion: Content: Weight (field_weight) */
+  $handler->display->display_options['sorts']['field_weight_value']['id'] = 'field_weight_value';
+  $handler->display->display_options['sorts']['field_weight_value']['table'] = 'field_data_field_weight';
+  $handler->display->display_options['sorts']['field_weight_value']['field'] = 'field_weight_value';
+  $handler->display->display_options['sorts']['field_weight_value']['order'] = 'DESC';
+  /* Sort criterion: Content: Title */
+  $handler->display->display_options['sorts']['title']['id'] = 'title';
+  $handler->display->display_options['sorts']['title']['table'] = 'node';
+  $handler->display->display_options['sorts']['title']['field'] = 'title';
+  /* Contextual filter: Field: Highlight location (field_highlight_location) */
+  $handler->display->display_options['arguments']['field_highlight_location_tid']['id'] = 'field_highlight_location_tid';
+  $handler->display->display_options['arguments']['field_highlight_location_tid']['table'] = 'field_data_field_highlight_location';
+  $handler->display->display_options['arguments']['field_highlight_location_tid']['field'] = 'field_highlight_location_tid';
+  $handler->display->display_options['arguments']['field_highlight_location_tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_highlight_location_tid']['default_argument_type'] = 'php';
+  $handler->display->display_options['arguments']['field_highlight_location_tid']['default_argument_options']['code'] = '$city = cbf_city_string();
+if ($city !== false) {
+  return ucwords($city) . \' city page\';
+} else {
+  return \'Home page\';
+}';
+  $handler->display->display_options['arguments']['field_highlight_location_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_highlight_location_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_highlight_location_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_highlight_location_tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_highlight_location_tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['field_highlight_location_tid']['validate_options']['vocabularies'] = array(
+    'banner' => 'banner',
+  );
+  $handler->display->display_options['arguments']['field_highlight_location_tid']['validate_options']['type'] = 'convert';
+  $handler->display->display_options['arguments']['field_highlight_location_tid']['validate']['fail'] = 'empty';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'activity' => 'activity',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+
+  /* Display: Block: Footer activities in this city */
+  $handler = $view->new_display('block', 'Block: Footer activities in this city', 'block');
+  $translatables['reaching_city_city_to_activity'] = array(
+    t('Master'),
+    t('<none>'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Audience'),
+    t('Activity category'),
+    t('&nbsp;'),
+    t('All'),
+    t('Block: Footer activities in this city'),
+  );
+  $export['reaching_city_city_to_activity'] = $view;
+
+  $view = new view();
   $view->name = 'reaching_city_civicrm_event_date_location';
   $view->description = '';
   $view->tag = 'default';
@@ -1365,7 +1546,7 @@ if ($city !== false) {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '150',
   );
-  /* Field: Content: Subtitle */
+  /* Field: Field: Subtitle */
   $handler->display->display_options['fields']['field_subtitle']['id'] = 'field_subtitle';
   $handler->display->display_options['fields']['field_subtitle']['table'] = 'field_data_field_subtitle';
   $handler->display->display_options['fields']['field_subtitle']['field'] = 'field_subtitle';
@@ -1566,7 +1747,7 @@ if ($city !== false) {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '150',
   );
-  /* Field: Content: Subtitle */
+  /* Field: Field: Subtitle */
   $handler->display->display_options['fields']['field_subtitle']['id'] = 'field_subtitle';
   $handler->display->display_options['fields']['field_subtitle']['table'] = 'field_data_field_subtitle';
   $handler->display->display_options['fields']['field_subtitle']['field'] = 'field_subtitle';

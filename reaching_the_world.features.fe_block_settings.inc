@@ -107,7 +107,7 @@ function reaching_the_world_default_fe_block_settings() {
         'region' => 'footer',
         'status' => 1,
         'theme' => 'reaching',
-        'weight' => -68,
+        'weight' => -75,
       ),
       'seven' => array(
         'region' => '',
@@ -221,7 +221,7 @@ function reaching_the_world_default_fe_block_settings() {
         'region' => 'footer',
         'status' => 1,
         'theme' => 'reaching',
-        'weight' => -67,
+        'weight' => -74,
       ),
       'seven' => array(
         'region' => '',
@@ -706,6 +706,60 @@ city/sydney',
     ),
     'title' => '',
     'visibility' => 1,
+  );
+
+  $export['views-7d9fd4366427da534abff2bd54dad1ec'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'delta' => '7d9fd4366427da534abff2bd54dad1ec',
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bootstrap' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bootstrap',
+        'weight' => 0,
+      ),
+      'cbootf' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'cbootf',
+        'weight' => 0,
+      ),
+      'garland' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'garland',
+        'weight' => 0,
+      ),
+      'logoslive' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'logoslive',
+        'weight' => 0,
+      ),
+      'reaching' => array(
+        'region' => 'footer',
+        'status' => 1,
+        'theme' => 'reaching',
+        'weight' => -76,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+      'smith' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'smith',
+        'weight' => 0,
+      ),
+    ),
   );
 
   $export['views-91265aa40c06744963c1a1b3b7f4a3f8'] = array(
