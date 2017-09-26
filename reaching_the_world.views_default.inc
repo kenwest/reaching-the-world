@@ -434,6 +434,31 @@ function reaching_the_world_views_default_views() {
   $handler->display->display_options['relationships']['field_activity_category_tid']['field'] = 'field_activity_category_tid';
   $handler->display->display_options['relationships']['field_activity_category_tid']['label'] = 'Activity category';
   $handler->display->display_options['relationships']['field_activity_category_tid']['required'] = TRUE;
+  /* Field: Field: Image */
+  $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
+  $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['label'] = '';
+  $handler->display->display_options['fields']['field_image']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image']['settings'] = array(
+    'image_style' => 'thumbnail',
+    'image_link' => '',
+  );
+  /* Field: Field: Thumbnail image */
+  $handler->display->display_options['fields']['field_thumbnail_image']['id'] = 'field_thumbnail_image';
+  $handler->display->display_options['fields']['field_thumbnail_image']['table'] = 'field_data_field_thumbnail_image';
+  $handler->display->display_options['fields']['field_thumbnail_image']['field'] = 'field_thumbnail_image';
+  $handler->display->display_options['fields']['field_thumbnail_image']['label'] = '';
+  $handler->display->display_options['fields']['field_thumbnail_image']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_thumbnail_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_thumbnail_image']['empty'] = '[field_image]';
+  $handler->display->display_options['fields']['field_thumbnail_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_thumbnail_image']['settings'] = array(
+    'image_style' => 'thumbnail',
+    'image_link' => '',
+  );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -442,6 +467,25 @@ function reaching_the_world_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '150',
+  );
+  /* Field: Field: Subtitle */
+  $handler->display->display_options['fields']['field_subtitle']['id'] = 'field_subtitle';
+  $handler->display->display_options['fields']['field_subtitle']['table'] = 'field_data_field_subtitle';
+  $handler->display->display_options['fields']['field_subtitle']['field'] = 'field_subtitle';
+  $handler->display->display_options['fields']['field_subtitle']['label'] = '';
+  $handler->display->display_options['fields']['field_subtitle']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_subtitle']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_subtitle']['empty'] = '[body]';
   /* Field: reaching.city Title */
   $handler->display->display_options['fields']['field_subtitle_1']['id'] = 'field_subtitle_1';
   $handler->display->display_options['fields']['field_subtitle_1']['table'] = 'field_data_field_subtitle';
@@ -547,6 +591,8 @@ if ($city !== false) {
     t('Desc'),
     t('Audience'),
     t('Activity category'),
+    t('[field_image]'),
+    t('[body]'),
     t('&nbsp;'),
     t('All'),
     t('Block: Footer activities in this city'),

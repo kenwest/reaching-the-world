@@ -711,6 +711,7 @@ city/sydney',
   $export['views-7d9fd4366427da534abff2bd54dad1ec'] = array(
     'cache' => -1,
     'css_class' => '',
+    'custom' => 0,
     'delta' => '7d9fd4366427da534abff2bd54dad1ec',
     'module' => 'views',
     'node_types' => array(),
@@ -760,6 +761,8 @@ city/sydney',
         'weight' => 0,
       ),
     ),
+    'title' => '',
+    'visibility' => 0,
   );
 
   $export['views-91265aa40c06744963c1a1b3b7f4a3f8'] = array(
