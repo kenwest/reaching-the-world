@@ -50,7 +50,7 @@ function reaching_the_world_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'reaching',
-        'weight' => -72,
+        'weight' => -76,
       ),
       'seven' => array(
         'region' => '',
@@ -354,6 +354,63 @@ function reaching_the_world_default_fe_block_settings() {
     'visibility' => 1,
   );
 
+  $export['views-32cbc1b8e8665695f6f990ef5f1f21ac'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => '32cbc1b8e8665695f6f990ef5f1f21ac',
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bootstrap' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bootstrap',
+        'weight' => 0,
+      ),
+      'cbootf' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'cbootf',
+        'weight' => 0,
+      ),
+      'garland' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'garland',
+        'weight' => 0,
+      ),
+      'logoslive' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'logoslive',
+        'weight' => 0,
+      ),
+      'reaching' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'reaching',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+      'smith' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'smith',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
   $export['views-3b234379a78f2c26c23c8eba0ecc1f46'] = array(
     'cache' => -1,
     'css_class' => '',
@@ -414,7 +471,7 @@ city/sydney',
       ),
     ),
     'title' => '',
-    'visibility' => 0,
+    'visibility' => 1,
   );
 
   $export['views-4b8a204015623578778937c8b62ab69a'] = array(
@@ -999,6 +1056,69 @@ city/sydney',
     'visibility' => 1,
   );
 
+  $export['views-c2fd4ae95ded118dd09f0162770baa84'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'c2fd4ae95ded118dd09f0162770baa84',
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => 'city/adelaide
+city/brisbane
+city/canberra
+city/hobart
+city/melbourne
+city/perth
+city/sydney',
+    'roles' => array(),
+    'themes' => array(
+      'bootstrap' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bootstrap',
+        'weight' => 0,
+      ),
+      'cbootf' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'cbootf',
+        'weight' => 0,
+      ),
+      'garland' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'garland',
+        'weight' => 0,
+      ),
+      'logoslive' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'logoslive',
+        'weight' => 0,
+      ),
+      'reaching' => array(
+        'region' => 'content',
+        'status' => 1,
+        'theme' => 'reaching',
+        'weight' => -75,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+      'smith' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'smith',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 1,
+  );
+
   $export['views-cb6ba155a962fef6259a859bbffc6e37'] = array(
     'cache' => -1,
     'css_class' => '',
@@ -1116,7 +1236,7 @@ city/sydney',
       ),
     ),
     'title' => '',
-    'visibility' => 0,
+    'visibility' => 1,
   );
 
   $export['views-reaching_city_highlights-block'] = array(
