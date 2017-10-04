@@ -253,20 +253,20 @@ function reaching_the_world_menu_default_menu_links() {
     'weight' => -45,
     'customized' => 1,
   );
-  // Exported menu link: menu-reaching-city-other-sites_bigger-questions:http://biggerquestions.org.
-  $menu_links['menu-reaching-city-other-sites_bigger-questions:http://biggerquestions.org'] = array(
+  // Exported menu link: menu-reaching-city-other-sites_bigger-questions:https://biggerquestions.org.
+  $menu_links['menu-reaching-city-other-sites_bigger-questions:https://biggerquestions.org'] = array(
     'menu_name' => 'menu-reaching-city-other-sites',
-    'link_path' => 'http://biggerquestions.org',
+    'link_path' => 'https://biggerquestions.org',
     'router_path' => '',
     'link_title' => 'Bigger questions',
     'options' => array(
+      'identifier' => 'menu-reaching-city-other-sites_bigger-questions:https://biggerquestions.org',
       'attributes' => array(),
       'item_attributes' => array(
         'id' => '',
         'class' => '',
         'style' => '',
       ),
-      'identifier' => 'menu-reaching-city-other-sites_bigger-questions:http://biggerquestions.org',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -276,20 +276,20 @@ function reaching_the_world_menu_default_menu_links() {
     'weight' => -49,
     'customized' => 1,
   );
-  // Exported menu link: menu-reaching-city-other-sites_city-bible-forum:http://citybibleforum.org.
-  $menu_links['menu-reaching-city-other-sites_city-bible-forum:http://citybibleforum.org'] = array(
+  // Exported menu link: menu-reaching-city-other-sites_city-bible-forum:https://citybibleforum.org.
+  $menu_links['menu-reaching-city-other-sites_city-bible-forum:https://citybibleforum.org'] = array(
     'menu_name' => 'menu-reaching-city-other-sites',
-    'link_path' => 'http://citybibleforum.org',
+    'link_path' => 'https://citybibleforum.org',
     'router_path' => '',
     'link_title' => 'City Bible Forum',
     'options' => array(
+      'identifier' => 'menu-reaching-city-other-sites_city-bible-forum:https://citybibleforum.org',
       'attributes' => array(),
       'item_attributes' => array(
         'id' => '',
         'class' => '',
         'style' => '',
       ),
-      'identifier' => 'menu-reaching-city-other-sites_city-bible-forum:http://citybibleforum.org',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -297,6 +297,52 @@ function reaching_the_world_menu_default_menu_links() {
     'has_children' => 0,
     'expanded' => 0,
     'weight' => -50,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-reaching-city-other-sites_lifework:https://lifeatwork.org.au/.
+  $menu_links['menu-reaching-city-other-sites_lifework:https://lifeatwork.org.au/'] = array(
+    'menu_name' => 'menu-reaching-city-other-sites',
+    'link_path' => 'https://lifeatwork.org.au/',
+    'router_path' => '',
+    'link_title' => 'Life@Work',
+    'options' => array(
+      'attributes' => array(),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
+      'identifier' => 'menu-reaching-city-other-sites_lifework:https://lifeatwork.org.au/',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -47,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-reaching-city-other-sites_smith-lecture:https://smithlecture.org/.
+  $menu_links['menu-reaching-city-other-sites_smith-lecture:https://smithlecture.org/'] = array(
+    'menu_name' => 'menu-reaching-city-other-sites',
+    'link_path' => 'https://smithlecture.org/',
+    'router_path' => '',
+    'link_title' => 'Smith Lecture',
+    'options' => array(
+      'attributes' => array(),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
+      'identifier' => 'menu-reaching-city-other-sites_smith-lecture:https://smithlecture.org/',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -48,
     'customized' => 1,
   );
   // Exported menu link: menu-reaching-city-secondary-men_adelaide:city/adelaide.
@@ -502,9 +548,11 @@ function reaching_the_world_menu_default_menu_links() {
   t('Contact us');
   t('Hobart');
   t('Library');
+  t('Life@Work');
   t('Melbourne');
   t('Perth');
   t('Privacy');
+  t('Smith Lecture');
   t('Support us');
   t('Sydney');
   t('reaching.city footer navigation');

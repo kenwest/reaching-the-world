@@ -738,7 +738,7 @@ if ($city !== false) {
   $handler->display->display_options['relationships']['taxonomy_vocabulary_3_tid']['field'] = 'taxonomy_vocabulary_3_tid';
   $handler->display->display_options['relationships']['taxonomy_vocabulary_3_tid']['label'] = 'Audience';
   $handler->display->display_options['relationships']['taxonomy_vocabulary_3_tid']['required'] = TRUE;
-  /* Field: Content: Event Image */
+  /* Field: Content: Series Image */
   $handler->display->display_options['fields']['field_series_image']['id'] = 'field_series_image';
   $handler->display->display_options['fields']['field_series_image']['table'] = 'field_data_field_series_image';
   $handler->display->display_options['fields']['field_series_image']['field'] = 'field_series_image';

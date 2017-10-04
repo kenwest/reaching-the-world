@@ -236,7 +236,7 @@ function reaching_the_world_default_fe_block_settings() {
         'weight' => 49,
       ),
     ),
-    'title' => 'Other sites',
+    'title' => 'Our websites',
     'visibility' => 0,
   );
 
