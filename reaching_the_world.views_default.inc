@@ -738,7 +738,7 @@ if ($city !== false) {
   $handler->display->display_options['relationships']['taxonomy_vocabulary_3_tid']['field'] = 'taxonomy_vocabulary_3_tid';
   $handler->display->display_options['relationships']['taxonomy_vocabulary_3_tid']['label'] = 'Audience';
   $handler->display->display_options['relationships']['taxonomy_vocabulary_3_tid']['required'] = TRUE;
-  /* Field: Content: Series Image */
+  /* Field: Content: Event Image */
   $handler->display->display_options['fields']['field_series_image']['id'] = 'field_series_image';
   $handler->display->display_options['fields']['field_series_image']['table'] = 'field_data_field_series_image';
   $handler->display->display_options['fields']['field_series_image']['field'] = 'field_series_image';
@@ -1753,7 +1753,41 @@ if ($city !== false) {
   /* Display: City page groups */
   $handler = $view->new_display('block', 'City page groups', 'block_2');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Get involved';
+  $handler->display->display_options['title'] = '[description]';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Content: Activity category (field_activity_category) */
+  $handler->display->display_options['relationships']['field_activity_category_tid']['id'] = 'field_activity_category_tid';
+  $handler->display->display_options['relationships']['field_activity_category_tid']['table'] = 'field_data_field_activity_category';
+  $handler->display->display_options['relationships']['field_activity_category_tid']['field'] = 'field_activity_category_tid';
+  $handler->display->display_options['relationships']['field_activity_category_tid']['label'] = 'Activity category';
+  $handler->display->display_options['relationships']['field_activity_category_tid']['required'] = TRUE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Field: Highlight */
+  $handler->display->display_options['fields']['field_highlight']['id'] = 'field_highlight';
+  $handler->display->display_options['fields']['field_highlight']['table'] = 'field_data_field_highlight';
+  $handler->display->display_options['fields']['field_highlight']['field'] = 'field_highlight';
+  $handler->display->display_options['fields']['field_highlight']['label'] = '';
+  $handler->display->display_options['fields']['field_highlight']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_highlight']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_highlight']['settings'] = array(
+    'image_style' => 'highlight',
+    'image_link' => 'content',
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Taxonomy term: Term description */
+  $handler->display->display_options['fields']['description']['id'] = 'description';
+  $handler->display->display_options['fields']['description']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['description']['field'] = 'description';
+  $handler->display->display_options['fields']['description']['relationship'] = 'field_activity_category_tid';
+  $handler->display->display_options['fields']['description']['label'] = '';
+  $handler->display->display_options['fields']['description']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Field: Highlight location (field_highlight_location) */
   $handler->display->display_options['arguments']['field_highlight_location_tid']['id'] = 'field_highlight_location_tid';
@@ -1817,7 +1851,8 @@ if ($city !== false) {
     t('City page highlights'),
     t('All'),
     t('City page groups'),
-    t('Get involved'),
+    t('[description]'),
+    t('Activity category'),
   );
   $export['reaching_city_highlights'] = $view;
 
