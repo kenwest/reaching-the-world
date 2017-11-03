@@ -384,7 +384,7 @@ function reaching_the_world_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = '<none>';
+  $handler->display->display_options['title'] = '<span>Reaching the world</span> <span>through the workplace</span> <span>with the good news</span> <span>about Jesus</span>';
   $handler->display->display_options['use_more_always'] = TRUE;
   $handler->display->display_options['link_display'] = 'page_1';
   $handler->display->display_options['access']['type'] = 'perm';
@@ -681,7 +681,7 @@ if ($city !== false) {
   $handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
   $translatables['reaching_city_city_to_activity'] = array(
     t('Master'),
-    t('<none>'),
+    t('<span>Reaching the world</span> <span>through the workplace</span> <span>with the good news</span> <span>about Jesus</span>'),
     t('more'),
     t('Apply'),
     t('Reset'),

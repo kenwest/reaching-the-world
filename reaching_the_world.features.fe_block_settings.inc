@@ -50,7 +50,7 @@ function reaching_the_world_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'reaching',
-        'weight' => -76,
+        'weight' => -77,
       ),
       'seven' => array(
         'region' => '',
@@ -185,7 +185,7 @@ function reaching_the_world_default_fe_block_settings() {
 
   $export['menu-menu-reaching-city-other-sites'] = array(
     'cache' => -1,
-    'css_class' => 'footer-column',
+    'css_class' => 'footer-column col-sm-offset-6',
     'custom' => 0,
     'delta' => 'menu-reaching-city-other-sites',
     'module' => 'menu',
@@ -1100,7 +1100,7 @@ city/sydney',
         'region' => 'content',
         'status' => 1,
         'theme' => 'reaching',
-        'weight' => -75,
+        'weight' => -76,
       ),
       'seven' => array(
         'region' => '',
