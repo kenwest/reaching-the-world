@@ -115,20 +115,26 @@ function reaching_the_world_menu_default_menu_links() {
     'weight' => -48,
     'customized' => 1,
   );
-  // Exported menu link: menu-reaching-city-main-menu_about-us:node/3075.
-  $menu_links['menu-reaching-city-main-menu_about-us:node/3075'] = array(
+  // Exported menu link: menu-reaching-city-main-menu_about-us:menutoken/5a0b9797c0d05.
+  $menu_links['menu-reaching-city-main-menu_about-us:menutoken/5a0b9797c0d05'] = array(
     'menu_name' => 'menu-reaching-city-main-menu',
-    'link_path' => 'node/3075',
-    'router_path' => 'node/%',
+    'link_path' => 'menutoken/5a0b9797c0d05',
+    'router_path' => 'menutoken/%',
     'link_title' => 'About us',
     'options' => array(
-      'identifier' => 'menu-reaching-city-main-menu_about-us:node/3075',
+      'identifier' => 'menu-reaching-city-main-menu_about-us:menutoken/5a0b9797c0d05',
       'attributes' => array(),
       'item_attributes' => array(
         'id' => '',
         'class' => '',
         'style' => '',
       ),
+      'menu_token_link_path' => '[campus:path]about',
+      'menu_token_data' => array(),
+      'menu_token_options' => array(
+        'clear' => 0,
+      ),
+      'alter' => TRUE,
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -184,20 +190,26 @@ function reaching_the_world_menu_default_menu_links() {
     'weight' => -50,
     'customized' => 1,
   );
-  // Exported menu link: menu-reaching-city-main-menu_contact-us:contact/us.
-  $menu_links['menu-reaching-city-main-menu_contact-us:contact/us'] = array(
+  // Exported menu link: menu-reaching-city-main-menu_contact-us:menutoken/5a0b97f67ea3e.
+  $menu_links['menu-reaching-city-main-menu_contact-us:menutoken/5a0b97f67ea3e'] = array(
     'menu_name' => 'menu-reaching-city-main-menu',
-    'link_path' => 'contact/us',
-    'router_path' => 'contact/%',
+    'link_path' => 'menutoken/5a0b97f67ea3e',
+    'router_path' => 'menutoken/%',
     'link_title' => 'Contact us',
     'options' => array(
+      'identifier' => 'menu-reaching-city-main-menu_contact-us:menutoken/5a0b97f67ea3e',
       'attributes' => array(),
       'item_attributes' => array(
         'id' => '',
         'class' => '',
         'style' => '',
       ),
-      'identifier' => 'menu-reaching-city-main-menu_contact-us:contact/us',
+      'menu_token_link_path' => '[campus:path]contact',
+      'menu_token_data' => array(),
+      'menu_token_options' => array(
+        'clear' => 0,
+      ),
+      'alter' => TRUE,
     ),
     'module' => 'menu',
     'hidden' => 0,
