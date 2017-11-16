@@ -1698,6 +1698,16 @@ if ($city !== false) {
   $handler->display->display_options['filters']['field_highlight_fid']['field'] = 'field_highlight_fid';
   $handler->display->display_options['filters']['field_highlight_fid']['operator'] = 'not empty';
   $handler->display->display_options['filters']['field_highlight_fid']['group'] = 1;
+  /* Filter criterion: Content: Activity category (field_activity_category) */
+  $handler->display->display_options['filters']['field_activity_category_tid']['id'] = 'field_activity_category_tid';
+  $handler->display->display_options['filters']['field_activity_category_tid']['table'] = 'field_data_field_activity_category';
+  $handler->display->display_options['filters']['field_activity_category_tid']['field'] = 'field_activity_category_tid';
+  $handler->display->display_options['filters']['field_activity_category_tid']['value'] = array(
+    1183 => '1183',
+    1184 => '1184',
+  );
+  $handler->display->display_options['filters']['field_activity_category_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_activity_category_tid']['vocabulary'] = 'activity_category';
 
   /* Display: City page highlights */
   $handler = $view->new_display('block', 'City page highlights', 'block_1');
