@@ -170,6 +170,138 @@ function reaching_the_world_views_default_views() {
   $export['empty_home_page'] = $view;
 
   $view = new view();
+  $view->name = 'reaching_city_activity_highlight_video';
+  $view->description = 'Shows the most recent highlight video for this activity';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'reaching.city Activity highlight video';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = '<none>';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Relationship: Entity Reference: Referenced Entity */
+  $handler->display->display_options['relationships']['field_in_activity_target_id']['id'] = 'field_in_activity_target_id';
+  $handler->display->display_options['relationships']['field_in_activity_target_id']['table'] = 'field_data_field_in_activity';
+  $handler->display->display_options['relationships']['field_in_activity_target_id']['field'] = 'field_in_activity_target_id';
+  $handler->display->display_options['relationships']['field_in_activity_target_id']['label'] = 'Activity';
+  $handler->display->display_options['relationships']['field_in_activity_target_id']['required'] = TRUE;
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  /* Field: Content: Video */
+  $handler->display->display_options['fields']['field_video']['id'] = 'field_video';
+  $handler->display->display_options['fields']['field_video']['table'] = 'field_data_field_video';
+  $handler->display->display_options['fields']['field_video']['field'] = 'field_video';
+  $handler->display->display_options['fields']['field_video']['label'] = '';
+  $handler->display->display_options['fields']['field_video']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_video']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_video']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_video']['delta_limit'] = '1';
+  $handler->display->display_options['fields']['field_video']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_video']['multi_type'] = 'ul';
+  /* Field: Content: Highlight video */
+  $handler->display->display_options['fields']['field_highlight_video']['id'] = 'field_highlight_video';
+  $handler->display->display_options['fields']['field_highlight_video']['table'] = 'field_data_field_highlight_video';
+  $handler->display->display_options['fields']['field_highlight_video']['field'] = 'field_highlight_video';
+  $handler->display->display_options['fields']['field_highlight_video']['label'] = '';
+  $handler->display->display_options['fields']['field_highlight_video']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_highlight_video']['empty'] = '[field_video]';
+  $handler->display->display_options['fields']['field_highlight_video']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_highlight_video']['click_sort_column'] = 'url';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Field: Subtitle */
+  $handler->display->display_options['fields']['field_subtitle']['id'] = 'field_subtitle';
+  $handler->display->display_options['fields']['field_subtitle']['table'] = 'field_data_field_subtitle';
+  $handler->display->display_options['fields']['field_subtitle']['field'] = 'field_subtitle';
+  $handler->display->display_options['fields']['field_subtitle']['label'] = '';
+  $handler->display->display_options['fields']['field_subtitle']['element_label_colon'] = FALSE;
+  /* Sort criterion: Content: Date (field_episode_date) */
+  $handler->display->display_options['sorts']['field_episode_date_value']['id'] = 'field_episode_date_value';
+  $handler->display->display_options['sorts']['field_episode_date_value']['table'] = 'field_data_field_episode_date';
+  $handler->display->display_options['sorts']['field_episode_date_value']['field'] = 'field_episode_date_value';
+  $handler->display->display_options['sorts']['field_episode_date_value']['order'] = 'DESC';
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['relationship'] = 'field_in_activity_target_id';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['nid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['nid']['validate']['type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['validate_options']['types'] = array(
+    'activity' => 'activity',
+  );
+  $handler->display->display_options['filter_groups']['groups'] = array(
+    1 => 'AND',
+    2 => 'OR',
+  );
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Video (field_video:url) */
+  $handler->display->display_options['filters']['field_video_url']['id'] = 'field_video_url';
+  $handler->display->display_options['filters']['field_video_url']['table'] = 'field_data_field_video';
+  $handler->display->display_options['filters']['field_video_url']['field'] = 'field_video_url';
+  $handler->display->display_options['filters']['field_video_url']['operator'] = 'not empty';
+  $handler->display->display_options['filters']['field_video_url']['group'] = 2;
+  /* Filter criterion: Content: Highlight video (field_highlight_video:url) */
+  $handler->display->display_options['filters']['field_highlight_video_url']['id'] = 'field_highlight_video_url';
+  $handler->display->display_options['filters']['field_highlight_video_url']['table'] = 'field_data_field_highlight_video';
+  $handler->display->display_options['filters']['field_highlight_video_url']['field'] = 'field_highlight_video_url';
+  $handler->display->display_options['filters']['field_highlight_video_url']['operator'] = 'not empty';
+  $handler->display->display_options['filters']['field_highlight_video_url']['group'] = 2;
+
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'page_1');
+  $handler->display->display_options['path'] = 'latest/video/activity/%';
+  $translatables['reaching_city_activity_highlight_video'] = array(
+    t('Master'),
+    t('<none>'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Activity'),
+    t('[field_video]'),
+    t('All'),
+    t('Page'),
+  );
+  $export['reaching_city_activity_highlight_video'] = $view;
+
+  $view = new view();
   $view->name = 'reaching_city_activity_to_civievent';
   $view->description = '';
   $view->tag = 'default';

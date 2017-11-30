@@ -12,7 +12,7 @@ function reaching_the_world_domain_default_domains() {
   $domains['reaching_city'] = array(
     'subdomain' => 'reaching.city',
     'sitename' => 'Reaching the world',
-    'scheme' => 'http',
+    'scheme' => 'https',
     'valid' => 1,
     'weight' => -2,
     'is_default' => 0,
