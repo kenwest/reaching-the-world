@@ -112,6 +112,29 @@ function reaching_the_world_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
+    'weight' => -47,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-reaching-city-footer-naviga_staff:user.
+  $menu_links['menu-reaching-city-footer-naviga_staff:user'] = array(
+    'menu_name' => 'menu-reaching-city-footer-naviga',
+    'link_path' => 'user',
+    'router_path' => 'user',
+    'link_title' => 'Staff',
+    'options' => array(
+      'attributes' => array(),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
+      'identifier' => 'menu-reaching-city-footer-naviga_staff:user',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
     'weight' => -48,
     'customized' => 1,
   );
@@ -565,6 +588,7 @@ function reaching_the_world_menu_default_menu_links() {
   t('Perth');
   t('Privacy');
   t('Smith Lecture');
+  t('Staff');
   t('Support us');
   t('Sydney');
   t('reaching.city footer navigation');
