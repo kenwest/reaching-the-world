@@ -529,7 +529,8 @@ city/sydney',
     'delta' => '472b95fedb14057ad03e0e0860949907',
     'module' => 'views',
     'node_types' => array(),
-    'pages' => '',
+    'pages' => 'domain/civicrm-events
+civicrm-event/*',
     'roles' => array(),
     'themes' => array(
       'bootstrap' => array(

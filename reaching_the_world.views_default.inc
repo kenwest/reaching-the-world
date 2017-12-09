@@ -182,6 +182,7 @@ function reaching_the_world_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = '<none>';
+  $handler->display->display_options['css_class'] = 'no-thumbnail';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -2297,6 +2298,10 @@ if ($city !== false) {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block_1');
+
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'page_1');
+  $handler->display->display_options['path'] = 'domain/civicrm-events';
   $translatables['reaching_city_national_civievent'] = array(
     t('Master'),
     t('<i class="fa fa-fw fa-calendar"></i>Upcoming events'),
@@ -2310,6 +2315,7 @@ if ($city !== false) {
     t('.'),
     t('[field_image]'),
     t('Block'),
+    t('Page'),
   );
   $export['reaching_city_national_civievent'] = $view;
 
