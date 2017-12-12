@@ -350,10 +350,10 @@ function reaching_the_world_default_fe_block_settings() {
         'weight' => -51,
       ),
       'edge' => array(
-        'region' => 'sidebar_second',
+        'region' => 'sidebar_first',
         'status' => 1,
         'theme' => 'edge',
-        'weight' => -62,
+        'weight' => -70,
       ),
       'garland' => array(
         'region' => '',
@@ -549,7 +549,7 @@ civicrm-event/*',
         'region' => 'sidebar_first',
         'status' => 1,
         'theme' => 'edge',
-        'weight' => -68,
+        'weight' => -69,
       ),
       'garland' => array(
         'region' => '',
@@ -716,6 +716,69 @@ city/sydney',
     ),
     'title' => '',
     'visibility' => 1,
+  );
+
+  $export['views-567bb48434d8abeb6b0e2092fa4cdefe'] = array(
+    'cache' => -1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => '567bb48434d8abeb6b0e2092fa4cdefe',
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => '<front>',
+    'roles' => array(),
+    'themes' => array(
+      'bootstrap' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bootstrap',
+        'weight' => 0,
+      ),
+      'cbootf' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'cbootf',
+        'weight' => 0,
+      ),
+      'edge' => array(
+        'region' => 'sidebar_second',
+        'status' => 1,
+        'theme' => 'edge',
+        'weight' => -79,
+      ),
+      'garland' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'garland',
+        'weight' => 0,
+      ),
+      'logoslive' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'logoslive',
+        'weight' => 0,
+      ),
+      'reaching' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'reaching',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+      'smith' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'smith',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
   );
 
   $export['views-58236067d431ce773f8c81e8470bb66a'] = array(
