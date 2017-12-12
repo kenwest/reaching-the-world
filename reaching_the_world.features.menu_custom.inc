@@ -31,7 +31,7 @@ function reaching_the_world_menu_default_menu_custom() {
   // Exported menu: menu-reaching-city-other-sites.
   $menus['menu-reaching-city-other-sites'] = array(
     'menu_name' => 'menu-reaching-city-other-sites',
-    'title' => 'reaching.city other sites',
+    'title' => 'reaching.city our websites',
     'description' => '',
   );
   // Exported menu: menu-reaching-city-secondary-men.
@@ -46,7 +46,7 @@ function reaching_the_world_menu_default_menu_custom() {
   t('The <em>Management</em> menu contains links for administrative tasks.');
   t('reaching.city footer navigation');
   t('reaching.city main menu');
-  t('reaching.city other sites');
+  t('reaching.city our websites');
   t('reaching.city secondary menu');
 
   return $menus;

@@ -28,14 +28,14 @@ function reaching_the_world_menu_default_menu_links() {
     'customized' => 0,
     'parent_identifier' => 'management_menus:admin/structure/menu',
   );
-  // Exported menu link: management_reachingcity-other-sites:admin/structure/menu/manage/menu-reaching-city-other-sites.
-  $menu_links['management_reachingcity-other-sites:admin/structure/menu/manage/menu-reaching-city-other-sites'] = array(
+  // Exported menu link: management_reachingcity-our-websites:admin/structure/menu/manage/menu-reaching-city-other-sites.
+  $menu_links['management_reachingcity-our-websites:admin/structure/menu/manage/menu-reaching-city-other-sites'] = array(
     'menu_name' => 'management',
     'link_path' => 'admin/structure/menu/manage/menu-reaching-city-other-sites',
     'router_path' => 'admin/structure/menu/manage/%',
-    'link_title' => 'reaching.city other sites',
+    'link_title' => 'reaching.city our websites',
     'options' => array(
-      'identifier' => 'management_reachingcity-other-sites:admin/structure/menu/manage/menu-reaching-city-other-sites',
+      'identifier' => 'management_reachingcity-our-websites:admin/structure/menu/manage/menu-reaching-city-other-sites',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -308,7 +308,7 @@ function reaching_the_world_menu_default_menu_links() {
     'external' => 1,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -49,
+    'weight' => -48,
     'customized' => 1,
   );
   // Exported menu link: menu-reaching-city-other-sites_city-bible-forum:https://citybibleforum.org.
@@ -354,7 +354,30 @@ function reaching_the_world_menu_default_menu_links() {
     'external' => 1,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -47,
+    'weight' => -45,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-reaching-city-other-sites_reaching-the-world:https://reaching.city.
+  $menu_links['menu-reaching-city-other-sites_reaching-the-world:https://reaching.city'] = array(
+    'menu_name' => 'menu-reaching-city-other-sites',
+    'link_path' => 'https://reaching.city',
+    'router_path' => '',
+    'link_title' => 'Reaching the world',
+    'options' => array(
+      'attributes' => array(),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
+      'identifier' => 'menu-reaching-city-other-sites_reaching-the-world:https://reaching.city',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -49,
     'customized' => 1,
   );
   // Exported menu link: menu-reaching-city-other-sites_smith-lecture:https://smithlecture.org/.
@@ -377,7 +400,30 @@ function reaching_the_world_menu_default_menu_links() {
     'external' => 1,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -48,
+    'weight' => -46,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-reaching-city-other-sites_the-edge:https://theedge.live.
+  $menu_links['menu-reaching-city-other-sites_the-edge:https://theedge.live'] = array(
+    'menu_name' => 'menu-reaching-city-other-sites',
+    'link_path' => 'https://theedge.live',
+    'router_path' => '',
+    'link_title' => 'The Edge',
+    'options' => array(
+      'attributes' => array(),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
+      'identifier' => 'menu-reaching-city-other-sites_the-edge:https://theedge.live',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -47,
     'customized' => 1,
   );
   // Exported menu link: menu-reaching-city-secondary-men_adelaide:city/adelaide.
@@ -587,12 +633,14 @@ function reaching_the_world_menu_default_menu_links() {
   t('Melbourne');
   t('Perth');
   t('Privacy');
+  t('Reaching the world');
   t('Smith Lecture');
   t('Staff');
   t('Support us');
   t('Sydney');
+  t('The Edge');
   t('reaching.city footer navigation');
-  t('reaching.city other sites');
+  t('reaching.city our websites');
 
   return $menu_links;
 }
