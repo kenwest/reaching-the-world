@@ -2881,6 +2881,17 @@ if ($city !== false) {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
+
+  /* Display: Smaller Block */
+  $handler = $view->new_display('block', 'Smaller Block', 'block_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = '<i class="fa fa-fw fa-youtube-play"></i>Latest videos';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '3';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
   $translatables['reaching_city_video_gallery'] = array(
     t('Master'),
     t('<i class="fa fa-fw fa-youtube-play"></i>Video gallery'),
@@ -2903,6 +2914,7 @@ if ($city !== false) {
     t('Page'),
     t('Block'),
     t('<i class="fa fa-fw fa-youtube-play"></i>Latest videos'),
+    t('Smaller Block'),
   );
   $export['reaching_city_video_gallery'] = $view;
 
