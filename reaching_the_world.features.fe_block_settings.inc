@@ -1494,7 +1494,8 @@ city/sydney',
     'delta' => 'd0668354e2c9477b84ce436b821385e0',
     'module' => 'views',
     'node_types' => array(),
-    'pages' => 'city/adelaide
+    'pages' => 'city/activity/public-library
+city/adelaide
 city/brisbane
 city/canberra
 city/hobart
