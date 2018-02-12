@@ -812,6 +812,106 @@ if ($city !== false) {
   $handler->display->display_options['fields']['description']['label'] = '';
   $handler->display->display_options['fields']['description']['exclude'] = TRUE;
   $handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
+
+  /* Display: City activities page */
+  $handler = $view->new_display('page', 'City activities page', 'page_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = '<i class="fa fa-fw fa-group"></i>Our activities';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['hide_empty'] = TRUE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Field: Image */
+  $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
+  $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['label'] = '';
+  $handler->display->display_options['fields']['field_image']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image']['settings'] = array(
+    'image_style' => 'thumbnail',
+    'image_link' => '',
+  );
+  /* Field: Field: Thumbnail image */
+  $handler->display->display_options['fields']['field_thumbnail_image']['id'] = 'field_thumbnail_image';
+  $handler->display->display_options['fields']['field_thumbnail_image']['table'] = 'field_data_field_thumbnail_image';
+  $handler->display->display_options['fields']['field_thumbnail_image']['field'] = 'field_thumbnail_image';
+  $handler->display->display_options['fields']['field_thumbnail_image']['label'] = '';
+  $handler->display->display_options['fields']['field_thumbnail_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_thumbnail_image']['empty'] = '[field_image]';
+  $handler->display->display_options['fields']['field_thumbnail_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_thumbnail_image']['settings'] = array(
+    'image_style' => 'thumbnail',
+    'image_link' => '',
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_wrapper_type'] = 'h3';
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '150',
+  );
+  /* Field: Field: Subtitle */
+  $handler->display->display_options['fields']['field_subtitle']['id'] = 'field_subtitle';
+  $handler->display->display_options['fields']['field_subtitle']['table'] = 'field_data_field_subtitle';
+  $handler->display->display_options['fields']['field_subtitle']['field'] = 'field_subtitle';
+  $handler->display->display_options['fields']['field_subtitle']['label'] = '';
+  $handler->display->display_options['fields']['field_subtitle']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_subtitle']['empty'] = '[body]';
+  /* Field: reaching.city Title */
+  $handler->display->display_options['fields']['field_subtitle_1']['id'] = 'field_subtitle_1';
+  $handler->display->display_options['fields']['field_subtitle_1']['table'] = 'field_data_field_subtitle';
+  $handler->display->display_options['fields']['field_subtitle_1']['field'] = 'field_subtitle';
+  $handler->display->display_options['fields']['field_subtitle_1']['relationship'] = 'taxonomy_vocabulary_3_tid';
+  $handler->display->display_options['fields']['field_subtitle_1']['ui_name'] = 'reaching.city Title';
+  $handler->display->display_options['fields']['field_subtitle_1']['label'] = '';
+  $handler->display->display_options['fields']['field_subtitle_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_subtitle_1']['element_label_colon'] = FALSE;
+  /* Field: Taxonomy term: Term description */
+  $handler->display->display_options['fields']['description_1']['id'] = 'description_1';
+  $handler->display->display_options['fields']['description_1']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['description_1']['field'] = 'description';
+  $handler->display->display_options['fields']['description_1']['relationship'] = 'field_activity_category_tid';
+  $handler->display->display_options['fields']['description_1']['label'] = '';
+  $handler->display->display_options['fields']['description_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['description_1']['element_label_colon'] = FALSE;
+  /* Field: Grouping field for Bootstrap column */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Grouping field for Bootstrap column';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '&nbsp;';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  /* Field:  Grouping field for Bootstrap row */
+  $handler->display->display_options['fields']['description']['id'] = 'description';
+  $handler->display->display_options['fields']['description']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['description']['field'] = 'description';
+  $handler->display->display_options['fields']['description']['relationship'] = 'field_activity_category_tid';
+  $handler->display->display_options['fields']['description']['ui_name'] = ' Grouping field for Bootstrap row';
+  $handler->display->display_options['fields']['description']['label'] = '';
+  $handler->display->display_options['fields']['description']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
+  $handler->display->display_options['path'] = 'city/activities';
   $translatables['reaching_city_city_to_activity'] = array(
     t('Master'),
     t('<span>Reaching the world</span> <span>through the workplace</span> <span>with the good news</span> <span>about Jesus</span>'),
@@ -830,6 +930,7 @@ if ($city !== false) {
     t('Block: Footer activities in this city'),
     t('Block: Content activities in this city'),
     t('<i class="fa fa-fw fa-group"></i>Our activities'),
+    t('City activities page'),
   );
   $export['reaching_city_city_to_activity'] = $view;
 
