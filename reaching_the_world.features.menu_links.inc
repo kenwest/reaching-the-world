@@ -450,7 +450,7 @@ function reaching_the_world_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -45,
+    'weight' => -50,
     'customized' => 1,
   );
   // Exported menu link: menu-reaching-city-secondary-men_brisbane:city/brisbane.
@@ -477,7 +477,7 @@ function reaching_the_world_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -47,
+    'weight' => -49,
     'customized' => 1,
   );
   // Exported menu link: menu-reaching-city-secondary-men_canberra:city/canberra.
@@ -504,7 +504,7 @@ function reaching_the_world_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -49,
+    'weight' => -48,
     'customized' => 1,
   );
   // Exported menu link: menu-reaching-city-secondary-men_hobart:city/hobart.
@@ -531,7 +531,7 @@ function reaching_the_world_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -44,
+    'weight' => -47,
     'customized' => 1,
   );
   // Exported menu link: menu-reaching-city-secondary-men_melbourne:city/melbourne.
@@ -558,7 +558,7 @@ function reaching_the_world_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -48,
+    'weight' => -46,
     'customized' => 1,
   );
   // Exported menu link: menu-reaching-city-secondary-men_perth:city/perth.
@@ -585,7 +585,7 @@ function reaching_the_world_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -46,
+    'weight' => -45,
     'customized' => 1,
   );
   // Exported menu link: menu-reaching-city-secondary-men_sydney:city/sydney.
@@ -612,7 +612,7 @@ function reaching_the_world_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -50,
+    'weight' => -44,
     'customized' => 1,
   );
 
