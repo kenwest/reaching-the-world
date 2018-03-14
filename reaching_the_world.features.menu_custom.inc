@@ -40,14 +40,22 @@ function reaching_the_world_menu_default_menu_custom() {
     'title' => 'reaching.city secondary menu',
     'description' => '',
   );
+  // Exported menu: menu-reaching-city-top-menu.
+  $menus['menu-reaching-city-top-menu'] = array(
+    'menu_name' => 'menu-reaching-city-top-menu',
+    'title' => 'reaching.city top menu',
+    'description' => 'Sits at the top of every page',
+  );
   // Translatables
   // Included for use with string extractors like potx.
   t('Management');
+  t('Sits at the top of every page');
   t('The <em>Management</em> menu contains links for administrative tasks.');
   t('reaching.city footer navigation');
   t('reaching.city main menu');
   t('reaching.city our websites');
   t('reaching.city secondary menu');
+  t('reaching.city top menu');
 
   return $menus;
 }

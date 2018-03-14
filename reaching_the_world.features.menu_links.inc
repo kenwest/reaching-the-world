@@ -615,6 +615,98 @@ function reaching_the_world_menu_default_menu_links() {
     'weight' => -44,
     'customized' => 1,
   );
+  // Exported menu link: menu-reaching-city-top-menu_about-us:node/3075.
+  $menu_links['menu-reaching-city-top-menu_about-us:node/3075'] = array(
+    'menu_name' => 'menu-reaching-city-top-menu',
+    'link_path' => 'node/3075',
+    'router_path' => 'node/%',
+    'link_title' => 'About us',
+    'options' => array(
+      'attributes' => array(),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
+      'identifier' => 'menu-reaching-city-top-menu_about-us:node/3075',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -50,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-reaching-city-top-menu_get-involved:<front>.
+  $menu_links['menu-reaching-city-top-menu_get-involved:<front>'] = array(
+    'menu_name' => 'menu-reaching-city-top-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Get involved',
+    'options' => array(
+      'attributes' => array(),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
+      'identifier' => 'menu-reaching-city-top-menu_get-involved:<front>',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -48,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-reaching-city-top-menu_support-us:node/15.
+  $menu_links['menu-reaching-city-top-menu_support-us:node/15'] = array(
+    'menu_name' => 'menu-reaching-city-top-menu',
+    'link_path' => 'node/15',
+    'router_path' => 'node/%',
+    'link_title' => 'Support us',
+    'options' => array(
+      'attributes' => array(),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
+      'identifier' => 'menu-reaching-city-top-menu_support-us:node/15',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -47,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-reaching-city-top-menu_try-us:<front>.
+  $menu_links['menu-reaching-city-top-menu_try-us:<front>'] = array(
+    'menu_name' => 'menu-reaching-city-top-menu',
+    'link_path' => '<front>',
+    'router_path' => '',
+    'link_title' => 'Try us',
+    'options' => array(
+      'attributes' => array(),
+      'item_attributes' => array(
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
+      'identifier' => 'menu-reaching-city-top-menu_try-us:<front>',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 1,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -49,
+    'customized' => 1,
+  );
 
   // Translatables
   // Included for use with string extractors like potx.
@@ -627,6 +719,7 @@ function reaching_the_world_menu_default_menu_links() {
   t('City Bible Forum');
   t('City Bible Forum site');
   t('Contact us');
+  t('Get involved');
   t('Hobart');
   t('Library');
   t('Life@Work');
@@ -639,6 +732,7 @@ function reaching_the_world_menu_default_menu_links() {
   t('Support us');
   t('Sydney');
   t('The Edge');
+  t('Try us');
   t('reaching.city footer navigation');
   t('reaching.city our websites');
 
