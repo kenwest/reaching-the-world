@@ -78,6 +78,7 @@ function reaching_the_world_domain_conf_default_variables() {
       'menu-reaching-city-main-menu' => 0,
       'menu-reaching-city-other-sites' => 0,
       'menu-reaching-city-secondary-men' => 0,
+      'menu-theedge-live-primary' => 0,
     ),
     'menu_parent_blog' => 'main-menu:0',
     'menu_options_panel' => array(
@@ -97,6 +98,7 @@ function reaching_the_world_domain_conf_default_variables() {
       'menu-reaching-city-main-menu' => 0,
       'menu-reaching-city-other-sites' => 0,
       'menu-reaching-city-secondary-men' => 0,
+      'menu-theedge-live-primary' => 0,
     ),
     'menu_parent_panel' => 'main-menu:0',
     'menu_options_activity' => array(
@@ -116,6 +118,7 @@ function reaching_the_world_domain_conf_default_variables() {
       'menu-reaching-city-main-menu' => 0,
       'menu-reaching-city-other-sites' => 0,
       'menu-reaching-city-secondary-men' => 0,
+      'menu-theedge-live-primary' => 0,
     ),
     'menu_parent_activity' => 'main-menu:0',
     'menu_options_campus_connect' => array(
@@ -135,6 +138,7 @@ function reaching_the_world_domain_conf_default_variables() {
       'menu-reaching-city-main-menu' => 0,
       'menu-reaching-city-other-sites' => 0,
       'menu-reaching-city-secondary-men' => 0,
+      'menu-theedge-live-primary' => 0,
     ),
     'menu_parent_campus_connect' => 'main-menu:0',
     'menu_options_campus_explore' => array(
@@ -154,6 +158,7 @@ function reaching_the_world_domain_conf_default_variables() {
       'menu-reaching-city-main-menu' => 0,
       'menu-reaching-city-other-sites' => 0,
       'menu-reaching-city-secondary-men' => 0,
+      'menu-theedge-live-primary' => 0,
     ),
     'menu_parent_campus_explore' => 'main-menu:0',
     'menu_options_campus_homepage' => array(
@@ -173,6 +178,7 @@ function reaching_the_world_domain_conf_default_variables() {
       'menu-reaching-city-main-menu' => 0,
       'menu-reaching-city-other-sites' => 0,
       'menu-reaching-city-secondary-men' => 0,
+      'menu-theedge-live-primary' => 0,
     ),
     'menu_parent_campus_homepage' => 'main-menu:0',
     'menu_options_contact_webform' => array(
@@ -192,6 +198,7 @@ function reaching_the_world_domain_conf_default_variables() {
       'menu-reaching-city-main-menu' => 0,
       'menu-reaching-city-other-sites' => 0,
       'menu-reaching-city-secondary-men' => 0,
+      'menu-theedge-live-primary' => 0,
     ),
     'menu_parent_contact_webform' => 'main-menu:0',
     'menu_options_document' => array(
@@ -211,6 +218,7 @@ function reaching_the_world_domain_conf_default_variables() {
       'menu-reaching-city-main-menu' => 0,
       'menu-reaching-city-other-sites' => 0,
       'menu-reaching-city-secondary-men' => 0,
+      'menu-theedge-live-primary' => 0,
     ),
     'menu_parent_document' => 'main-menu:0',
     'menu_options_episode' => array(
@@ -230,6 +238,7 @@ function reaching_the_world_domain_conf_default_variables() {
       'menu-reaching-city-main-menu' => 0,
       'menu-reaching-city-other-sites' => 0,
       'menu-reaching-city-secondary-men' => 0,
+      'menu-theedge-live-primary' => 0,
     ),
     'menu_parent_episode' => 'main-menu:0',
     'menu_options_event' => array(
@@ -249,6 +258,7 @@ function reaching_the_world_domain_conf_default_variables() {
       'menu-reaching-city-main-menu' => 0,
       'menu-reaching-city-other-sites' => 0,
       'menu-reaching-city-secondary-men' => 0,
+      'menu-theedge-live-primary' => 0,
     ),
     'menu_parent_event' => 'main-menu:0',
     'menu_options_page' => array(
@@ -268,6 +278,7 @@ function reaching_the_world_domain_conf_default_variables() {
       'menu-reaching-city-main-menu' => 0,
       'menu-reaching-city-other-sites' => 0,
       'menu-reaching-city-secondary-men' => 0,
+      'menu-theedge-live-primary' => 0,
     ),
     'menu_parent_page' => 'main-menu:0',
     'menu_options_series' => array(
@@ -287,6 +298,7 @@ function reaching_the_world_domain_conf_default_variables() {
       'menu-reaching-city-main-menu' => 0,
       'menu-reaching-city-other-sites' => 0,
       'menu-reaching-city-secondary-men' => 0,
+      'menu-theedge-live-primary' => 0,
     ),
     'menu_parent_series' => 'main-menu:0',
     'menu_options_story' => array(
@@ -306,6 +318,7 @@ function reaching_the_world_domain_conf_default_variables() {
       'menu-reaching-city-main-menu' => 0,
       'menu-reaching-city-other-sites' => 0,
       'menu-reaching-city-secondary-men' => 0,
+      'menu-theedge-live-primary' => 0,
     ),
     'menu_parent_story' => 'main-menu:0',
     'menu_options_webform' => array(
@@ -325,6 +338,7 @@ function reaching_the_world_domain_conf_default_variables() {
       'menu-reaching-city-main-menu' => 0,
       'menu-reaching-city-other-sites' => 0,
       'menu-reaching-city-secondary-men' => 0,
+      'menu-theedge-live-primary' => 0,
     ),
     'menu_parent_webform' => 'main-menu:0',
     'node_admin_theme' => 1,

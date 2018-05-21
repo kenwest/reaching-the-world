@@ -239,7 +239,7 @@ function reaching_the_world_views_default_views() {
   $handler->display->display_options['fields']['field_subtitle']['field'] = 'field_subtitle';
   $handler->display->display_options['fields']['field_subtitle']['label'] = '';
   $handler->display->display_options['fields']['field_subtitle']['element_label_colon'] = FALSE;
-  /* Sort criterion: Content: Date (field_episode_date) */
+  /* Sort criterion: Field: Date (field_episode_date) */
   $handler->display->display_options['sorts']['field_episode_date_value']['id'] = 'field_episode_date_value';
   $handler->display->display_options['sorts']['field_episode_date_value']['table'] = 'field_data_field_episode_date';
   $handler->display->display_options['sorts']['field_episode_date_value']['field'] = 'field_episode_date_value';
@@ -2229,7 +2229,7 @@ if ($city !== false) {
   $handler->display->display_options['fields']['field_subtitle']['label'] = '';
   $handler->display->display_options['fields']['field_subtitle']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_subtitle']['empty'] = '[body]';
-  /* Sort criterion: Content: Date (field_episode_date) */
+  /* Sort criterion: Field: Date (field_episode_date) */
   $handler->display->display_options['sorts']['field_episode_date_value']['id'] = 'field_episode_date_value';
   $handler->display->display_options['sorts']['field_episode_date_value']['table'] = 'field_data_field_episode_date';
   $handler->display->display_options['sorts']['field_episode_date_value']['field'] = 'field_episode_date_value';
@@ -2262,7 +2262,7 @@ if ($city !== false) {
   $handler->display->display_options['sorts']['totalcount']['table'] = 'node_counter';
   $handler->display->display_options['sorts']['totalcount']['field'] = 'totalcount';
   $handler->display->display_options['sorts']['totalcount']['order'] = 'DESC';
-  /* Sort criterion: Content: Date (field_episode_date) */
+  /* Sort criterion: Field: Date (field_episode_date) */
   $handler->display->display_options['sorts']['field_episode_date_value']['id'] = 'field_episode_date_value';
   $handler->display->display_options['sorts']['field_episode_date_value']['table'] = 'field_data_field_episode_date';
   $handler->display->display_options['sorts']['field_episode_date_value']['field'] = 'field_episode_date_value';
@@ -2283,7 +2283,7 @@ if ($city !== false) {
   $handler->display->display_options['filters']['type']['value'] = array(
     'blog' => 'blog',
   );
-  /* Filter criterion: Content: Date (field_episode_date) */
+  /* Filter criterion: Field: Date (field_episode_date) */
   $handler->display->display_options['filters']['field_episode_date_value']['id'] = 'field_episode_date_value';
   $handler->display->display_options['filters']['field_episode_date_value']['table'] = 'field_data_field_episode_date';
   $handler->display->display_options['filters']['field_episode_date_value']['field'] = 'field_episode_date_value';
@@ -2555,7 +2555,7 @@ if ($city !== false) {
   $handler->display->display_options['fields']['field_subtitle']['label'] = '';
   $handler->display->display_options['fields']['field_subtitle']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_subtitle']['empty'] = '[body]';
-  /* Sort criterion: Content: Date (field_episode_date) */
+  /* Sort criterion: Field: Date (field_episode_date) */
   $handler->display->display_options['sorts']['field_episode_date_value']['id'] = 'field_episode_date_value';
   $handler->display->display_options['sorts']['field_episode_date_value']['table'] = 'field_data_field_episode_date';
   $handler->display->display_options['sorts']['field_episode_date_value']['field'] = 'field_episode_date_value';
@@ -2583,7 +2583,7 @@ if ($city !== false) {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Sort criterion: Content: Date (field_episode_date) */
+  /* Sort criterion: Field: Date (field_episode_date) */
   $handler->display->display_options['sorts']['field_episode_date_value']['id'] = 'field_episode_date_value';
   $handler->display->display_options['sorts']['field_episode_date_value']['table'] = 'field_data_field_episode_date';
   $handler->display->display_options['sorts']['field_episode_date_value']['field'] = 'field_episode_date_value';
@@ -2599,7 +2599,7 @@ if ($city !== false) {
   $handler->display->display_options['sorts']['totalcount']['table'] = 'node_counter';
   $handler->display->display_options['sorts']['totalcount']['field'] = 'totalcount';
   $handler->display->display_options['sorts']['totalcount']['order'] = 'DESC';
-  /* Sort criterion: Content: Date (field_episode_date) */
+  /* Sort criterion: Field: Date (field_episode_date) */
   $handler->display->display_options['sorts']['field_episode_date_value']['id'] = 'field_episode_date_value';
   $handler->display->display_options['sorts']['field_episode_date_value']['table'] = 'field_data_field_episode_date';
   $handler->display->display_options['sorts']['field_episode_date_value']['field'] = 'field_episode_date_value';
@@ -2620,7 +2620,7 @@ if ($city !== false) {
   $handler->display->display_options['filters']['type']['value'] = array(
     'episode' => 'episode',
   );
-  /* Filter criterion: Content: Date (field_episode_date) */
+  /* Filter criterion: Field: Date (field_episode_date) */
   $handler->display->display_options['filters']['field_episode_date_value']['id'] = 'field_episode_date_value';
   $handler->display->display_options['filters']['field_episode_date_value']['table'] = 'field_data_field_episode_date';
   $handler->display->display_options['filters']['field_episode_date_value']['field'] = 'field_episode_date_value';
