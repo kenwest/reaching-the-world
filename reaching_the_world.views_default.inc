@@ -561,7 +561,7 @@ function reaching_the_world_views_default_views() {
   $handler->display->display_options['relationships']['taxonomy_vocabulary_3_tid']['field'] = 'taxonomy_vocabulary_3_tid';
   $handler->display->display_options['relationships']['taxonomy_vocabulary_3_tid']['label'] = 'Audience';
   $handler->display->display_options['relationships']['taxonomy_vocabulary_3_tid']['required'] = TRUE;
-  /* Relationship: Content: Activity category (field_activity_category) */
+  /* Relationship: Field: Activity category (field_activity_category) */
   $handler->display->display_options['relationships']['field_activity_category_tid']['id'] = 'field_activity_category_tid';
   $handler->display->display_options['relationships']['field_activity_category_tid']['table'] = 'field_data_field_activity_category';
   $handler->display->display_options['relationships']['field_activity_category_tid']['field'] = 'field_activity_category_tid';
@@ -1217,7 +1217,6 @@ if ($city !== false) {
   $handler->display->display_options['fields']['supplemental_address_1']['location_type'] = '0';
   $handler->display->display_options['fields']['supplemental_address_1']['location_op'] = '0';
   $handler->display->display_options['fields']['supplemental_address_1']['is_primary'] = 0;
-  $handler->display->display_options['fields']['supplemental_address_1']['is_billing'] = 0;
   /* Field: CiviCRM Address: Full Street Address */
   $handler->display->display_options['fields']['street_address']['id'] = 'street_address';
   $handler->display->display_options['fields']['street_address']['table'] = 'civicrm_address';
@@ -1232,7 +1231,6 @@ if ($city !== false) {
   $handler->display->display_options['fields']['street_address']['location_type'] = '0';
   $handler->display->display_options['fields']['street_address']['location_op'] = '0';
   $handler->display->display_options['fields']['street_address']['is_primary'] = 0;
-  $handler->display->display_options['fields']['street_address']['is_billing'] = 0;
   /* Field: CiviCRM Address: City / Suburb */
   $handler->display->display_options['fields']['city']['id'] = 'city';
   $handler->display->display_options['fields']['city']['table'] = 'civicrm_address';
@@ -1244,7 +1242,6 @@ if ($city !== false) {
   $handler->display->display_options['fields']['city']['location_type'] = '0';
   $handler->display->display_options['fields']['city']['location_op'] = '0';
   $handler->display->display_options['fields']['city']['is_primary'] = 0;
-  $handler->display->display_options['fields']['city']['is_billing'] = 0;
   /* Field: CiviCRM Address: Postal Code */
   $handler->display->display_options['fields']['postal_code']['id'] = 'postal_code';
   $handler->display->display_options['fields']['postal_code']['table'] = 'civicrm_address';
@@ -1256,7 +1253,6 @@ if ($city !== false) {
   $handler->display->display_options['fields']['postal_code']['location_type'] = '0';
   $handler->display->display_options['fields']['postal_code']['location_op'] = '0';
   $handler->display->display_options['fields']['postal_code']['is_primary'] = 0;
-  $handler->display->display_options['fields']['postal_code']['is_billing'] = 0;
   /* Field: Address details */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
@@ -1387,7 +1383,6 @@ if ($city !== false) {
   $handler->display->display_options['fields']['supplemental_address_1']['location_type'] = '0';
   $handler->display->display_options['fields']['supplemental_address_1']['location_op'] = '0';
   $handler->display->display_options['fields']['supplemental_address_1']['is_primary'] = 0;
-  $handler->display->display_options['fields']['supplemental_address_1']['is_billing'] = 0;
   /* Field: CiviCRM Address: Full Street Address */
   $handler->display->display_options['fields']['street_address']['id'] = 'street_address';
   $handler->display->display_options['fields']['street_address']['table'] = 'civicrm_address';
@@ -1398,7 +1393,6 @@ if ($city !== false) {
   $handler->display->display_options['fields']['street_address']['location_type'] = '0';
   $handler->display->display_options['fields']['street_address']['location_op'] = '0';
   $handler->display->display_options['fields']['street_address']['is_primary'] = 0;
-  $handler->display->display_options['fields']['street_address']['is_billing'] = 0;
   /* Field: CiviCRM Address: City / Suburb */
   $handler->display->display_options['fields']['city']['id'] = 'city';
   $handler->display->display_options['fields']['city']['table'] = 'civicrm_address';
@@ -1409,7 +1403,6 @@ if ($city !== false) {
   $handler->display->display_options['fields']['city']['location_type'] = '0';
   $handler->display->display_options['fields']['city']['location_op'] = '0';
   $handler->display->display_options['fields']['city']['is_primary'] = 0;
-  $handler->display->display_options['fields']['city']['is_billing'] = 0;
   /* Field: CiviCRM Address: Postal Code */
   $handler->display->display_options['fields']['postal_code']['id'] = 'postal_code';
   $handler->display->display_options['fields']['postal_code']['table'] = 'civicrm_address';
@@ -1420,7 +1413,6 @@ if ($city !== false) {
   $handler->display->display_options['fields']['postal_code']['location_type'] = '0';
   $handler->display->display_options['fields']['postal_code']['location_op'] = '0';
   $handler->display->display_options['fields']['postal_code']['is_primary'] = 0;
-  $handler->display->display_options['fields']['postal_code']['is_billing'] = 0;
   /* Field: Latitude */
   $handler->display->display_options['fields']['geo_code_1']['id'] = 'geo_code_1';
   $handler->display->display_options['fields']['geo_code_1']['table'] = 'civicrm_address';
@@ -1433,7 +1425,6 @@ if ($city !== false) {
   $handler->display->display_options['fields']['geo_code_1']['location_type'] = '0';
   $handler->display->display_options['fields']['geo_code_1']['location_op'] = '0';
   $handler->display->display_options['fields']['geo_code_1']['is_primary'] = 0;
-  $handler->display->display_options['fields']['geo_code_1']['is_billing'] = 0;
   /* Field: Longitude */
   $handler->display->display_options['fields']['geo_code_2']['id'] = 'geo_code_2';
   $handler->display->display_options['fields']['geo_code_2']['table'] = 'civicrm_address';
@@ -1446,7 +1437,6 @@ if ($city !== false) {
   $handler->display->display_options['fields']['geo_code_2']['location_type'] = '0';
   $handler->display->display_options['fields']['geo_code_2']['location_op'] = '0';
   $handler->display->display_options['fields']['geo_code_2']['is_primary'] = 0;
-  $handler->display->display_options['fields']['geo_code_2']['is_billing'] = 0;
   /* Field: Tooltip */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
@@ -1600,6 +1590,12 @@ if ($city !== false) {
     3 => 'OR',
     2 => 'OR',
   );
+  /* Filter criterion: CiviCRM Events: Is Online Registration On */
+  $handler->display->display_options['filters']['is_online_registration']['id'] = 'is_online_registration';
+  $handler->display->display_options['filters']['is_online_registration']['table'] = 'civicrm_event';
+  $handler->display->display_options['filters']['is_online_registration']['field'] = 'is_online_registration';
+  $handler->display->display_options['filters']['is_online_registration']['value'] = '1';
+  $handler->display->display_options['filters']['is_online_registration']['group'] = 1;
   /* Filter criterion: CiviCRM Price Fields: Visibility */
   $handler->display->display_options['filters']['visibility']['id'] = 'visibility';
   $handler->display->display_options['filters']['visibility']['table'] = 'civicrm_price_field';
@@ -1611,22 +1607,20 @@ if ($city !== false) {
   $handler->display->display_options['filters']['visibility']['expose']['label'] = 'Visibility';
   $handler->display->display_options['filters']['visibility']['expose']['operator'] = 'visibility_op';
   $handler->display->display_options['filters']['visibility']['expose']['identifier'] = 'visibility';
-  /* Filter criterion: CiviCRM Price Fields: Active On */
-  $handler->display->display_options['filters']['active_on_1']['id'] = 'active_on_1';
-  $handler->display->display_options['filters']['active_on_1']['table'] = 'civicrm_price_field';
-  $handler->display->display_options['filters']['active_on_1']['field'] = 'active_on';
-  $handler->display->display_options['filters']['active_on_1']['relationship'] = 'civicrm_price_field';
-  $handler->display->display_options['filters']['active_on_1']['operator'] = '<=';
-  $handler->display->display_options['filters']['active_on_1']['value']['value'] = 'now';
-  $handler->display->display_options['filters']['active_on_1']['value']['type'] = 'offset';
-  $handler->display->display_options['filters']['active_on_1']['group'] = 2;
-  /* Filter criterion: CiviCRM Price Fields: Active On */
-  $handler->display->display_options['filters']['active_on']['id'] = 'active_on';
-  $handler->display->display_options['filters']['active_on']['table'] = 'civicrm_price_field';
-  $handler->display->display_options['filters']['active_on']['field'] = 'active_on';
-  $handler->display->display_options['filters']['active_on']['relationship'] = 'civicrm_price_field';
-  $handler->display->display_options['filters']['active_on']['operator'] = 'empty';
-  $handler->display->display_options['filters']['active_on']['group'] = 2;
+  /* Filter criterion: CiviCRM Price Fields: Is Active */
+  $handler->display->display_options['filters']['is_active']['id'] = 'is_active';
+  $handler->display->display_options['filters']['is_active']['table'] = 'civicrm_price_field';
+  $handler->display->display_options['filters']['is_active']['field'] = 'is_active';
+  $handler->display->display_options['filters']['is_active']['relationship'] = 'civicrm_price_field';
+  $handler->display->display_options['filters']['is_active']['value'] = '1';
+  $handler->display->display_options['filters']['is_active']['group'] = 1;
+  /* Filter criterion: CiviCRM Price Field Values: Is Active */
+  $handler->display->display_options['filters']['is_active_1']['id'] = 'is_active_1';
+  $handler->display->display_options['filters']['is_active_1']['table'] = 'civicrm_price_field_value';
+  $handler->display->display_options['filters']['is_active_1']['field'] = 'is_active';
+  $handler->display->display_options['filters']['is_active_1']['relationship'] = 'civicrm_price_field_value';
+  $handler->display->display_options['filters']['is_active_1']['value'] = '1';
+  $handler->display->display_options['filters']['is_active_1']['group'] = 1;
   /* Filter criterion: CiviCRM Price Fields: Expire On */
   $handler->display->display_options['filters']['expire_on_1']['id'] = 'expire_on_1';
   $handler->display->display_options['filters']['expire_on_1']['table'] = 'civicrm_price_field';
@@ -1643,20 +1637,22 @@ if ($city !== false) {
   $handler->display->display_options['filters']['expire_on']['relationship'] = 'civicrm_price_field';
   $handler->display->display_options['filters']['expire_on']['operator'] = 'empty';
   $handler->display->display_options['filters']['expire_on']['group'] = 3;
-  /* Filter criterion: CiviCRM Price Fields: Is Active */
-  $handler->display->display_options['filters']['is_active']['id'] = 'is_active';
-  $handler->display->display_options['filters']['is_active']['table'] = 'civicrm_price_field';
-  $handler->display->display_options['filters']['is_active']['field'] = 'is_active';
-  $handler->display->display_options['filters']['is_active']['relationship'] = 'civicrm_price_field';
-  $handler->display->display_options['filters']['is_active']['value'] = '1';
-  $handler->display->display_options['filters']['is_active']['group'] = 1;
-  /* Filter criterion: CiviCRM Price Field Values: Is Active */
-  $handler->display->display_options['filters']['is_active_1']['id'] = 'is_active_1';
-  $handler->display->display_options['filters']['is_active_1']['table'] = 'civicrm_price_field_value';
-  $handler->display->display_options['filters']['is_active_1']['field'] = 'is_active';
-  $handler->display->display_options['filters']['is_active_1']['relationship'] = 'civicrm_price_field_value';
-  $handler->display->display_options['filters']['is_active_1']['value'] = '1';
-  $handler->display->display_options['filters']['is_active_1']['group'] = 1;
+  /* Filter criterion: CiviCRM Price Fields: Active On */
+  $handler->display->display_options['filters']['active_on_1']['id'] = 'active_on_1';
+  $handler->display->display_options['filters']['active_on_1']['table'] = 'civicrm_price_field';
+  $handler->display->display_options['filters']['active_on_1']['field'] = 'active_on';
+  $handler->display->display_options['filters']['active_on_1']['relationship'] = 'civicrm_price_field';
+  $handler->display->display_options['filters']['active_on_1']['operator'] = '<=';
+  $handler->display->display_options['filters']['active_on_1']['value']['value'] = 'now';
+  $handler->display->display_options['filters']['active_on_1']['value']['type'] = 'offset';
+  $handler->display->display_options['filters']['active_on_1']['group'] = 2;
+  /* Filter criterion: CiviCRM Price Fields: Active On */
+  $handler->display->display_options['filters']['active_on']['id'] = 'active_on';
+  $handler->display->display_options['filters']['active_on']['table'] = 'civicrm_price_field';
+  $handler->display->display_options['filters']['active_on']['field'] = 'active_on';
+  $handler->display->display_options['filters']['active_on']['relationship'] = 'civicrm_price_field';
+  $handler->display->display_options['filters']['active_on']['operator'] = 'empty';
+  $handler->display->display_options['filters']['active_on']['group'] = 2;
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
@@ -1938,7 +1934,7 @@ if ($city !== false) {
   $handler->display->display_options['filters']['field_highlight_fid']['field'] = 'field_highlight_fid';
   $handler->display->display_options['filters']['field_highlight_fid']['operator'] = 'not empty';
   $handler->display->display_options['filters']['field_highlight_fid']['group'] = 1;
-  /* Filter criterion: Content: Activity category (field_activity_category) */
+  /* Filter criterion: Field: Activity category (field_activity_category) */
   $handler->display->display_options['filters']['field_activity_category_tid']['id'] = 'field_activity_category_tid';
   $handler->display->display_options['filters']['field_activity_category_tid']['table'] = 'field_data_field_activity_category';
   $handler->display->display_options['filters']['field_activity_category_tid']['field'] = 'field_activity_category_tid';
@@ -2010,7 +2006,7 @@ if ($city !== false) {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = '[description]';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Content: Activity category (field_activity_category) */
+  /* Relationship: Field: Activity category (field_activity_category) */
   $handler->display->display_options['relationships']['field_activity_category_tid']['id'] = 'field_activity_category_tid';
   $handler->display->display_options['relationships']['field_activity_category_tid']['table'] = 'field_data_field_activity_category';
   $handler->display->display_options['relationships']['field_activity_category_tid']['field'] = 'field_activity_category_tid';
@@ -2081,7 +2077,7 @@ if ($city !== false) {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Activity category (field_activity_category) */
+  /* Filter criterion: Field: Activity category (field_activity_category) */
   $handler->display->display_options['filters']['field_activity_category_tid']['id'] = 'field_activity_category_tid';
   $handler->display->display_options['filters']['field_activity_category_tid']['table'] = 'field_data_field_activity_category';
   $handler->display->display_options['filters']['field_activity_category_tid']['field'] = 'field_activity_category_tid';
@@ -2734,7 +2730,6 @@ if ($city !== false) {
   $handler->display->display_options['fields']['street_address']['location_type'] = '0';
   $handler->display->display_options['fields']['street_address']['location_op'] = '0';
   $handler->display->display_options['fields']['street_address']['is_primary'] = 1;
-  $handler->display->display_options['fields']['street_address']['is_billing'] = 0;
   /* Field: CiviCRM Address: City / Suburb */
   $handler->display->display_options['fields']['city']['id'] = 'city';
   $handler->display->display_options['fields']['city']['table'] = 'civicrm_address';
@@ -2745,7 +2740,6 @@ if ($city !== false) {
   $handler->display->display_options['fields']['city']['location_type'] = '0';
   $handler->display->display_options['fields']['city']['location_op'] = '0';
   $handler->display->display_options['fields']['city']['is_primary'] = 1;
-  $handler->display->display_options['fields']['city']['is_billing'] = 0;
   /* Field: CiviCRM Address: State/Province */
   $handler->display->display_options['fields']['state_province']['id'] = 'state_province';
   $handler->display->display_options['fields']['state_province']['table'] = 'civicrm_address';
@@ -2756,7 +2750,6 @@ if ($city !== false) {
   $handler->display->display_options['fields']['state_province']['location_type'] = '0';
   $handler->display->display_options['fields']['state_province']['location_op'] = '0';
   $handler->display->display_options['fields']['state_province']['is_primary'] = 1;
-  $handler->display->display_options['fields']['state_province']['is_billing'] = 0;
   $handler->display->display_options['fields']['state_province']['prov_display'] = '1';
   /* Field: CiviCRM Address: Postal Code */
   $handler->display->display_options['fields']['postal_code']['id'] = 'postal_code';
@@ -2768,7 +2761,6 @@ if ($city !== false) {
   $handler->display->display_options['fields']['postal_code']['location_type'] = '0';
   $handler->display->display_options['fields']['postal_code']['location_op'] = '0';
   $handler->display->display_options['fields']['postal_code']['is_primary'] = 1;
-  $handler->display->display_options['fields']['postal_code']['is_billing'] = 0;
   /* Field: CiviCRM Address: Latitude */
   $handler->display->display_options['fields']['geo_code_1']['id'] = 'geo_code_1';
   $handler->display->display_options['fields']['geo_code_1']['table'] = 'civicrm_address';
@@ -2780,7 +2772,6 @@ if ($city !== false) {
   $handler->display->display_options['fields']['geo_code_1']['location_type'] = '0';
   $handler->display->display_options['fields']['geo_code_1']['location_op'] = '0';
   $handler->display->display_options['fields']['geo_code_1']['is_primary'] = 1;
-  $handler->display->display_options['fields']['geo_code_1']['is_billing'] = 0;
   /* Field: CiviCRM Address: Longitude */
   $handler->display->display_options['fields']['geo_code_2']['id'] = 'geo_code_2';
   $handler->display->display_options['fields']['geo_code_2']['table'] = 'civicrm_address';
@@ -2792,7 +2783,6 @@ if ($city !== false) {
   $handler->display->display_options['fields']['geo_code_2']['location_type'] = '0';
   $handler->display->display_options['fields']['geo_code_2']['location_op'] = '0';
   $handler->display->display_options['fields']['geo_code_2']['is_primary'] = 1;
-  $handler->display->display_options['fields']['geo_code_2']['is_billing'] = 0;
   /* Filter criterion: CiviCRM Contacts: Contact Sub Type */
   $handler->display->display_options['filters']['contact_sub_type']['id'] = 'contact_sub_type';
   $handler->display->display_options['filters']['contact_sub_type']['table'] = 'civicrm_contact';
